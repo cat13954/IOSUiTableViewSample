@@ -23,6 +23,7 @@ class CellLoopDetail: UITableViewCell {
     
     private lazy var labTitle:UILabel = {
        let lab = UILabel()
+        //单行显示
         lab.lineBreakMode = NSLineBreakMode.byWordWrapping
         lab.numberOfLines = 1
         lab.textColor = ColorUtils.parser("#313131")

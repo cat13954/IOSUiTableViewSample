@@ -57,6 +57,7 @@ extension ViewController{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //item
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CellLoopDetail
+         
         cell.setValueForCell(item: self.list[indexPath.row])
         return cell
     }
