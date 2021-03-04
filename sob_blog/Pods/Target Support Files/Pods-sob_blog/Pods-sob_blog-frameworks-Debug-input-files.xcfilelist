@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-sob_blog/Pods-sob_blog-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
