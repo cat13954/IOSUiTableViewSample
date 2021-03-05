@@ -29,7 +29,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         //高度自动
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(CellLoopDetail.self, forCellReuseIdentifier: cellId)
-        //请求网络数据
+        //请求网络数据
         httpGetLoop()
     }
     

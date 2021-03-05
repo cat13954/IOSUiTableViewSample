@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         window?.backgroundColor = .white
 //        window?.rootViewController = DemoSnapKit01()
-        window?.rootViewController = ViewController()
+        //window?.rootViewController = ViewController()
+        window?.rootViewController = WxListController()
         window?.makeKeyAndVisible()
         return true
     }
