@@ -26,7 +26,10 @@ class WxListController: UIViewController, UITableViewDelegate, UITableViewDataSo
         view.addSubview(uiTableView)
         uiTableView.snp.makeConstraints { (make) in
             //大小和父容器一样大
-            make.size.equalToSuperview()
+            make.width.equalToSuperview()
+            //设置上下位置,在安全区内
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
         //设置代理
         uiTableView.delegate = self
@@ -49,7 +52,7 @@ class WxListController: UIViewController, UITableViewDelegate, UITableViewDataSo
         
     }
 }
-
+//tabview的cell实现
 extension WxListController{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return wxList.count
