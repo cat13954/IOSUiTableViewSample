@@ -23,6 +23,14 @@ class WxListController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //设置title
+        self.title = "公众号列表"
+        //如果2个都设置,会显示nav的
+        //设置导航元素项目的标题，如果没有设置self.navigationItem.title，
+        //系统会使用self.title作为导航栏的标题
+        self.navigationItem.title = "技术文章作者"
+        
+        //把tableview添加到当前控制器中.
         view.addSubview(uiTableView)
         uiTableView.snp.makeConstraints { (make) in
             //大小和父容器一样大
