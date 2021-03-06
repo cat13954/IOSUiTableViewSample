@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1B17F825F387D70055C16C /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B17F725F387D70055C16C /* ArticleViewController.swift */; };
 		4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006225F26325007BCEB0 /* ApiConstant.swift */; };
 		4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006825F264CD007BCEB0 /* BeanWxList.swift */; };
 		4C9F007125F2684C007BCEB0 /* WxListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F007025F2684C007BCEB0 /* WxListController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		0E50B26EAE7EE38975195D2B /* Pods-uitable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uitable.debug.xcconfig"; path = "Target Support Files/Pods-uitable/Pods-uitable.debug.xcconfig"; sourceTree = "<group>"; };
+		4C1B17F725F387D70055C16C /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		4C9F006225F26325007BCEB0 /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
 		4C9F006825F264CD007BCEB0 /* BeanWxList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanWxList.swift; sourceTree = "<group>"; };
 		4C9F007025F2684C007BCEB0 /* WxListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WxListController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1B17F625F387B50055C16C /* article */ = {
+			isa = PBXGroup;
+			children = (
+				4C1B17F725F387D70055C16C /* ArticleViewController.swift */,
+			);
+			path = article;
+			sourceTree = "<group>";
+		};
 		4C9F006125F26310007BCEB0 /* api */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		4C9F006725F264AB007BCEB0 /* wan */ = {
 			isa = PBXGroup;
 			children = (
+				4C1B17F625F387B50055C16C /* article */,
 				4C9F006825F264CD007BCEB0 /* BeanWxList.swift */,
 				4C9F007025F2684C007BCEB0 /* WxListController.swift */,
 				4C9F007525F26CA5007BCEB0 /* CellWxAuthor.swift */,
@@ -364,6 +375,7 @@
 				4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */,
 				4CF48B8725F130F900188AE5 /* AppDelegate.swift in Sources */,
 				4CF48B8925F130F900188AE5 /* SceneDelegate.swift in Sources */,
+				4C1B17F825F387D70055C16C /* ArticleViewController.swift in Sources */,
 				4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */,
 				4CF48BD825F133E200188AE5 /* WeatherResponse.swift in Sources */,
 				4CF48BD325F1337B00188AE5 /* ColorUtils.swift in Sources */,

@@ -28,7 +28,7 @@ class WxListController: UIViewController, UITableViewDelegate, UITableViewDataSo
         //如果2个都设置,会显示nav的
         //设置导航元素项目的标题，如果没有设置self.navigationItem.title，
         //系统会使用self.title作为导航栏的标题
-        self.navigationItem.title = "技术文章作者"
+        self.navigationItem.title = "作者"
         
         //把tableview添加到当前控制器中.
         view.addSubview(uiTableView)
@@ -79,10 +79,14 @@ extension WxListController{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //设置点击的时候,cell抬起手指之后，就没有那个选中的灰色背景颜色
         //方法①https://blog.csdn.net/iotjin/article/details/80806881
-        //tableView.deselectRow(at: indexPath, animated: false)
+        tableView.deselectRow(at: indexPath, animated: false)
         //返回点击的position
         print("click \(indexPath.row)")
         //跳转push到一个新的view
-        self.navigationController?.pushViewController(ViewController(), animated: true)
+        let articleVC = ArticleViewController()
+        //传递id和名字
+        articleVC.userId = String(wxList[indexPath.row].id)
+        articleVC.authorName = wxList[indexPath.row].name
+        self.navigationController?.pushViewController(articleVC, animated: true)
     }
 }
