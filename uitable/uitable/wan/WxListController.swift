@@ -67,6 +67,7 @@ extension WxListController{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellWxAuthor
         
         //设置数据
@@ -76,6 +77,9 @@ extension WxListController{
     
     //item 的点击事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //设置点击的时候,cell抬起手指之后，就没有那个选中的灰色背景颜色
+        //方法①https://blog.csdn.net/iotjin/article/details/80806881
+        //tableView.deselectRow(at: indexPath, animated: false)
         //返回点击的position
         print("click \(indexPath.row)")
         //跳转push到一个新的view
