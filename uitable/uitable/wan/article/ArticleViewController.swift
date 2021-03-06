@@ -21,5 +21,10 @@ class ArticleViewController: UIViewController {
         self.title = authorName
         print("id: \(userId ?? "def")")
         
+        //获取文章列表
+        //cell模型编写
+        //显示文章列表
+        //文章的cell编写
+        
     }
 }
