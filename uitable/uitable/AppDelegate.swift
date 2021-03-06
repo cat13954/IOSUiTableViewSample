@@ -19,7 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
 //        window?.rootViewController = DemoSnapKit01()
         //window?.rootViewController = ViewController()
-        window?.rootViewController = WxListController()
+        //window?.rootViewController = WxListController()
+        //设置导航器
+        let nav = UINavigationController(rootViewController: WxListController())
+        //设置nav作为主窗口
+        window?.rootViewController = nav
+        //显示主窗口(默认不显示)
         window?.makeKeyAndVisible()
         return true
     }
