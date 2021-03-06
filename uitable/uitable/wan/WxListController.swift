@@ -73,4 +73,12 @@ extension WxListController{
         cell.setValueForCell(data: wxList[indexPath.row])
         return cell
     }
+    
+    //item 的点击事件
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //返回点击的position
+        print("click \(indexPath.row)")
+        //跳转push到一个新的view
+        self.navigationController?.pushViewController(ViewController(), animated: true)
+    }
 }
