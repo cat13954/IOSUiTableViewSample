@@ -45,7 +45,7 @@ class ArticleInfo: Mappable {
     var pageCount: Int = 0
     var size: Int = 0
     var total: Int = 0
-    var datas: Article?
+    var datas: [Article]?
 }
 
 class Article: Mappable {
@@ -54,7 +54,7 @@ class Article: Mappable {
     }
     
     func mapping(map: Map) {
-        author <- map[""]
+        author <- map["author"]
         chapterName <- map["chapterName"]
         link <- map["link"]
         niceDate <- map["niceDate"]

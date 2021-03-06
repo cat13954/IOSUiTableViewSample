@@ -10,4 +10,11 @@ class ApiConstant: NSObject {
     public static func getChaptersUrl() -> String{
         return "https://wanandroid.com/wxarticle/chapters/json"
     }
+    
+    public static func getArticleListUrl(userID: String, page: Int) -> String{
+        //https://wanandroid.com/wxarticle/list/408/1/json
+        //替换userID和page
+        return "https://wanandroid.com/wxarticle/list/\(userID)/\(page)/json"
+         
+    }
 }

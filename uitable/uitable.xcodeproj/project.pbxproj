@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C1B17F825F387D70055C16C /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B17F725F387D70055C16C /* ArticleViewController.swift */; };
 		4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B17FC25F38BED0055C16C /* BeanArticle.swift */; };
+		4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B180125F39B900055C16C /* CellArticleDetail.swift */; };
 		4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006225F26325007BCEB0 /* ApiConstant.swift */; };
 		4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006825F264CD007BCEB0 /* BeanWxList.swift */; };
 		4C9F007125F2684C007BCEB0 /* WxListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F007025F2684C007BCEB0 /* WxListController.swift */; };
@@ -47,6 +48,7 @@
 		0E50B26EAE7EE38975195D2B /* Pods-uitable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uitable.debug.xcconfig"; path = "Target Support Files/Pods-uitable/Pods-uitable.debug.xcconfig"; sourceTree = "<group>"; };
 		4C1B17F725F387D70055C16C /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		4C1B17FC25F38BED0055C16C /* BeanArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanArticle.swift; sourceTree = "<group>"; };
+		4C1B180125F39B900055C16C /* CellArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellArticleDetail.swift; sourceTree = "<group>"; };
 		4C9F006225F26325007BCEB0 /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
 		4C9F006825F264CD007BCEB0 /* BeanWxList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanWxList.swift; sourceTree = "<group>"; };
 		4C9F007025F2684C007BCEB0 /* WxListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WxListController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				4C1B17F725F387D70055C16C /* ArticleViewController.swift */,
 				4C1B17FC25F38BED0055C16C /* BeanArticle.swift */,
+				4C1B180125F39B900055C16C /* CellArticleDetail.swift */,
 			);
 			path = article;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			files = (
 				4CF48B8B25F130F900188AE5 /* ViewController.swift in Sources */,
 				4C9F007625F26CA5007BCEB0 /* CellWxAuthor.swift in Sources */,
+				4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */,
 				4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */,
 				4CF48B8725F130F900188AE5 /* AppDelegate.swift in Sources */,
 				4CF48B8925F130F900188AE5 /* SceneDelegate.swift in Sources */,

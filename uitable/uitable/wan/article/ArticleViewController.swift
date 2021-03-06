@@ -8,9 +8,18 @@
 import Foundation
 import UIKit
 import SnapKit
+import Alamofire
 
 ///作者对应文章列表
-class ArticleViewController: UIViewController {
+class ArticleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    private let cellID = "article"
+    private var articleList = [Article]()
+    
+    private lazy var uiTableView: UITableView = {
+        let tab = UITableView()
+        return tab
+    }()
     
     //作者的id
     var userId: String?
@@ -20,11 +29,53 @@ class ArticleViewController: UIViewController {
         //设置页面的标题
         self.title = authorName
         print("id: \(userId ?? "def")")
-        
+        view.addSubview(uiTableView)
+        uiTableView.snp.makeConstraints { (make) in
+            //宽度等于容器宽度 =  屏幕宽度
+            make.width.equalToSuperview()
+            //top bottom都是安全区的位置
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
+        //代理方法
+        uiTableView.dataSource = self
+        uiTableView.delegate = self
+        //cell高度自动计算
+        uiTableView.rowHeight = UITableView.automaticDimension
+        //注册cell
+        uiTableView.register(CellArticleDetail.self, forCellReuseIdentifier: cellID)
         //获取文章列表
-        //cell模型编写
-        //显示文章列表
-        //文章的cell编写
+        getArtileById()
         
+    }
+    
+    func getArtileById() {
+        //通过传递过来的id,获取文章列表
+        Alamofire.request(ApiConstant.getArticleListUrl(userID: userId ?? "", page: 1))
+            .responseObject{ (response: DataResponse<BeanArticle>) in
+                //数据获取成功之后,设置到list中.然后更新table
+                //let size = response.result.value?.data?.datas?.count
+                //print("size: \(String(describing: size))")
+                self.articleList = response.result.value?.data?.datas ?? [Article]()
+                //刷新tableview
+                self.uiTableView.reloadData()
+            }
+    }
+}
+
+extension ArticleViewController{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articleList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! CellArticleDetail
+        //设置cell的数据
+        cell.setValueForCell(data: articleList[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
