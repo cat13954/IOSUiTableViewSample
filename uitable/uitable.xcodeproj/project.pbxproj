@@ -10,6 +10,7 @@
 		4C1B17F825F387D70055C16C /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B17F725F387D70055C16C /* ArticleViewController.swift */; };
 		4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B17FC25F38BED0055C16C /* BeanArticle.swift */; };
 		4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B180125F39B900055C16C /* CellArticleDetail.swift */; };
+		4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C38393025F5123400A8294E /* ArticleWebViewController.swift */; };
 		4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006225F26325007BCEB0 /* ApiConstant.swift */; };
 		4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006825F264CD007BCEB0 /* BeanWxList.swift */; };
 		4C9F007125F2684C007BCEB0 /* WxListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F007025F2684C007BCEB0 /* WxListController.swift */; };
@@ -49,6 +50,7 @@
 		4C1B17F725F387D70055C16C /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		4C1B17FC25F38BED0055C16C /* BeanArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanArticle.swift; sourceTree = "<group>"; };
 		4C1B180125F39B900055C16C /* CellArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellArticleDetail.swift; sourceTree = "<group>"; };
+		4C38393025F5123400A8294E /* ArticleWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewController.swift; sourceTree = "<group>"; };
 		4C9F006225F26325007BCEB0 /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
 		4C9F006825F264CD007BCEB0 /* BeanWxList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanWxList.swift; sourceTree = "<group>"; };
 		4C9F007025F2684C007BCEB0 /* WxListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WxListController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				4C1B17F725F387D70055C16C /* ArticleViewController.swift */,
 				4C1B17FC25F38BED0055C16C /* BeanArticle.swift */,
 				4C1B180125F39B900055C16C /* CellArticleDetail.swift */,
+				4C38393025F5123400A8294E /* ArticleWebViewController.swift */,
 			);
 			path = article;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				4CF48BD325F1337B00188AE5 /* ColorUtils.swift in Sources */,
 				4CF48BCE25F1333500188AE5 /* CellLoopDetail.swift in Sources */,
 				4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */,
+				4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */,
 				4C9F007125F2684C007BCEB0 /* WxListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

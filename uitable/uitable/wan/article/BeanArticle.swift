@@ -14,9 +14,9 @@ class BeanArticle: Mappable {
     }
     
     func mapping(map: Map) {
-        data <- map["data"]
-        errorCode <- map["errorCode"]
-        errorMsg <- map["errorMsg"]
+        data        <- map["data"]
+        errorCode   <- map["errorCode"]
+        errorMsg    <- map["errorMsg"]
     }
     
     var data: ArticleInfo?

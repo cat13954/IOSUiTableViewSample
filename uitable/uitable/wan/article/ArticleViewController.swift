@@ -75,7 +75,14 @@ extension ArticleViewController{
         return cell
     }
     
+    //文章的点击事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //关闭点击的灰色背景
         tableView.deselectRow(at: indexPath, animated: false)
+        //点击文章的时候,进入文章详情中
+        let web = ArticleWebViewController()
+        //把数据中对应的文章的链接取出,设置到文章详情中的属性articleUrl中
+        web.articleUrl = articleList[indexPath.row].link
+        self.navigationController?.pushViewController(web, animated: true)
     }
 }
