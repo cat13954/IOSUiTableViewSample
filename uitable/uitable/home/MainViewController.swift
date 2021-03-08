@@ -18,7 +18,7 @@ class MainViewController: UITabBarController {
     }
     
     func initTab() {
-        let homeVC = HomeViewController()
+        let homeVC = WxListController()
         homeVC.tabBarItem.title = "首页"
         homeVC.tabBarItem.image = UIImage(named: "tab_home_normal")
         
