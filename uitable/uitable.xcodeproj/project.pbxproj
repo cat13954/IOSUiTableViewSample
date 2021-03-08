@@ -11,6 +11,12 @@
 		4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B17FC25F38BED0055C16C /* BeanArticle.swift */; };
 		4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B180125F39B900055C16C /* CellArticleDetail.swift */; };
 		4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C38393025F5123400A8294E /* ArticleWebViewController.swift */; };
+		4C97417B25F66FE4000C1B8B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97417A25F66FE4000C1B8B /* MainViewController.swift */; };
+		4C97418325F6707E000C1B8B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97418225F6707E000C1B8B /* HomeViewController.swift */; };
+		4C97418825F671E5000C1B8B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97418725F671E5000C1B8B /* ActivityViewController.swift */; };
+		4C97418D25F67264000C1B8B /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97418C25F67264000C1B8B /* FindViewController.swift */; };
+		4C97419225F67270000C1B8B /* CeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97419125F67270000C1B8B /* CeViewController.swift */; };
+		4C97419725F6727E000C1B8B /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97419625F6727E000C1B8B /* MeViewController.swift */; };
 		4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006225F26325007BCEB0 /* ApiConstant.swift */; };
 		4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006825F264CD007BCEB0 /* BeanWxList.swift */; };
 		4C9F007125F2684C007BCEB0 /* WxListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F007025F2684C007BCEB0 /* WxListController.swift */; };
@@ -51,6 +57,12 @@
 		4C1B17FC25F38BED0055C16C /* BeanArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanArticle.swift; sourceTree = "<group>"; };
 		4C1B180125F39B900055C16C /* CellArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellArticleDetail.swift; sourceTree = "<group>"; };
 		4C38393025F5123400A8294E /* ArticleWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewController.swift; sourceTree = "<group>"; };
+		4C97417A25F66FE4000C1B8B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4C97418225F6707E000C1B8B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4C97418725F671E5000C1B8B /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		4C97418C25F67264000C1B8B /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		4C97419125F67270000C1B8B /* CeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeViewController.swift; sourceTree = "<group>"; };
+		4C97419625F6727E000C1B8B /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		4C9F006225F26325007BCEB0 /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
 		4C9F006825F264CD007BCEB0 /* BeanWxList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanWxList.swift; sourceTree = "<group>"; };
 		4C9F007025F2684C007BCEB0 /* WxListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WxListController.swift; sourceTree = "<group>"; };
@@ -112,6 +124,19 @@
 			path = article;
 			sourceTree = "<group>";
 		};
+		4C97417925F66ED8000C1B8B /* home */ = {
+			isa = PBXGroup;
+			children = (
+				4C97417A25F66FE4000C1B8B /* MainViewController.swift */,
+				4C97418225F6707E000C1B8B /* HomeViewController.swift */,
+				4C97418725F671E5000C1B8B /* ActivityViewController.swift */,
+				4C97418C25F67264000C1B8B /* FindViewController.swift */,
+				4C97419125F67270000C1B8B /* CeViewController.swift */,
+				4C97419625F6727E000C1B8B /* MeViewController.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		4C9F006125F26310007BCEB0 /* api */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +181,7 @@
 		4CF48B8525F130F900188AE5 /* uitable */ = {
 			isa = PBXGroup;
 			children = (
+				4C97417925F66ED8000C1B8B /* home */,
 				4C9F006725F264AB007BCEB0 /* wan */,
 				4C9F006125F26310007BCEB0 /* api */,
 				4CF48B8625F130F900188AE5 /* AppDelegate.swift */,
@@ -383,12 +409,18 @@
 				4C9F007625F26CA5007BCEB0 /* CellWxAuthor.swift in Sources */,
 				4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */,
 				4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */,
+				4C97418825F671E5000C1B8B /* ActivityViewController.swift in Sources */,
+				4C97418D25F67264000C1B8B /* FindViewController.swift in Sources */,
 				4CF48B8725F130F900188AE5 /* AppDelegate.swift in Sources */,
 				4CF48B8925F130F900188AE5 /* SceneDelegate.swift in Sources */,
 				4C1B17F825F387D70055C16C /* ArticleViewController.swift in Sources */,
 				4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */,
+				4C97419725F6727E000C1B8B /* MeViewController.swift in Sources */,
 				4CF48BD825F133E200188AE5 /* WeatherResponse.swift in Sources */,
+				4C97419225F67270000C1B8B /* CeViewController.swift in Sources */,
+				4C97417B25F66FE4000C1B8B /* MainViewController.swift in Sources */,
 				4CF48BD325F1337B00188AE5 /* ColorUtils.swift in Sources */,
+				4C97418325F6707E000C1B8B /* HomeViewController.swift in Sources */,
 				4CF48BCE25F1333500188AE5 /* CellLoopDetail.swift in Sources */,
 				4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */,
 				4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */,
