@@ -17,7 +17,7 @@ class WxListController: BaseViewController, UITableViewDelegate, UITableViewData
     
     private lazy var uiTableView : UITableView = {
         let tab = UITableView(frame: .zero)
-        
+        tab.tableFooterView = UIView(frame: .zero)
         return tab
     }()
     

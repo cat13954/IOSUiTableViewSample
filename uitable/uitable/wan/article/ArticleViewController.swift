@@ -18,6 +18,8 @@ class ArticleViewController: BaseViewController, UITableViewDelegate, UITableVie
     
     private lazy var uiTableView: UITableView = {
         let tab = UITableView()
+        //把默认的分割线隐藏(当数据还没有返回的时候,不显示分割线)
+        tab.tableFooterView = UIView(frame: .zero)
         return tab
     }()
     
