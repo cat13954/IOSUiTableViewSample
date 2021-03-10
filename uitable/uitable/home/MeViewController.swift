@@ -7,7 +7,7 @@
 
 import UIKit
 import SnapKit
-class MeViewController: UIViewController {
+class MeViewController: BaseViewController {
 
     private lazy var lab: UILabel = {
         let label = UILabel()

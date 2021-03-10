@@ -7,7 +7,7 @@
 import AlamofireObjectMapper
 import UIKit
 import Alamofire
-class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+class ViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSource{
     let cellId = "sob_loop"
 
     var list = [Forecast]()

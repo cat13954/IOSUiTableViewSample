@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 //公众号列表展示页面                 
-class WxListController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class WxListController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
 
     
     //保存微信列表

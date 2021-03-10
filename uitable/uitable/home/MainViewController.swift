@@ -11,30 +11,27 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            
-        
         initTab()
-        
     }
     
     func initTab() {
-        let homeVC = WxListController()
+        let homeVC = CustomNavigationControllerViewController(rootViewController: WxListController())
         homeVC.tabBarItem.title = "首页"
         homeVC.tabBarItem.image = UIImage(named: "tab_home_normal")
         
-        let activityVC = ActivityViewController()
+        let activityVC = CustomNavigationControllerViewController(rootViewController: ActivityViewController())
         activityVC.tabBarItem.title = "沸点"
         activityVC.tabBarItem.image = UIImage(named: "tab_activity")
         
-        let findVC = FindViewController()
+        let findVC = CustomNavigationControllerViewController(rootViewController: FindViewController())
         findVC.tabBarItem.title = "发现"
         findVC.tabBarItem.image = UIImage(named: "tab_find_normal")
         
-        let ceVC = CeViewController()
+        let ceVC = CustomNavigationControllerViewController(rootViewController: CeViewController())
         ceVC.tabBarItem.title = "小册"
         ceVC.tabBarItem.image = UIImage(named: "tab_xiaoce_normal")
         
-        let meVC = MeViewController()
+        let meVC = CustomNavigationControllerViewController(rootViewController: MeViewController())
         meVC.tabBarItem.title = "我的"
         meVC.tabBarItem.image = UIImage(named: "tab_profile_normal")
         

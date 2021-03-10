@@ -21,6 +21,8 @@
 		4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006825F264CD007BCEB0 /* BeanWxList.swift */; };
 		4C9F007125F2684C007BCEB0 /* WxListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F007025F2684C007BCEB0 /* WxListController.swift */; };
 		4C9F007625F26CA5007BCEB0 /* CellWxAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F007525F26CA5007BCEB0 /* CellWxAuthor.swift */; };
+		4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEE82F25F8FD7C00AA395F /* BaseViewController.swift */; };
+		4CDEE83525F8FE7200AA395F /* CustomNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEE83425F8FE7200AA395F /* CustomNavigationControllerViewController.swift */; };
 		4CF48B8725F130F900188AE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF48B8625F130F900188AE5 /* AppDelegate.swift */; };
 		4CF48B8925F130F900188AE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF48B8825F130F900188AE5 /* SceneDelegate.swift */; };
 		4CF48B8B25F130F900188AE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF48B8A25F130F900188AE5 /* ViewController.swift */; };
@@ -67,6 +69,8 @@
 		4C9F006825F264CD007BCEB0 /* BeanWxList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanWxList.swift; sourceTree = "<group>"; };
 		4C9F007025F2684C007BCEB0 /* WxListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WxListController.swift; sourceTree = "<group>"; };
 		4C9F007525F26CA5007BCEB0 /* CellWxAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWxAuthor.swift; sourceTree = "<group>"; };
+		4CDEE82F25F8FD7C00AA395F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4CDEE83425F8FE7200AA395F /* CustomNavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationControllerViewController.swift; sourceTree = "<group>"; };
 		4CF48B8325F130F900188AE5 /* uitable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uitable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF48B8625F130F900188AE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CF48B8825F130F900188AE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,15 @@
 			path = wan;
 			sourceTree = "<group>";
 		};
+		4CDEE82E25F8FD4F00AA395F /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CDEE82F25F8FD7C00AA395F /* BaseViewController.swift */,
+				4CDEE83425F8FE7200AA395F /* CustomNavigationControllerViewController.swift */,
+			);
+			path = BaseControllers;
+			sourceTree = "<group>";
+		};
 		4CF48B7A25F130F800188AE5 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +194,7 @@
 		4CF48B8525F130F900188AE5 /* uitable */ = {
 			isa = PBXGroup;
 			children = (
+				4CDEE82E25F8FD4F00AA395F /* BaseControllers */,
 				4C97417925F66ED8000C1B8B /* home */,
 				4C9F006725F264AB007BCEB0 /* wan */,
 				4C9F006125F26310007BCEB0 /* api */,
@@ -406,10 +420,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF48B8B25F130F900188AE5 /* ViewController.swift in Sources */,
+				4CDEE83525F8FE7200AA395F /* CustomNavigationControllerViewController.swift in Sources */,
 				4C9F007625F26CA5007BCEB0 /* CellWxAuthor.swift in Sources */,
 				4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */,
 				4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */,
 				4C97418825F671E5000C1B8B /* ActivityViewController.swift in Sources */,
+				4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */,
 				4C97418D25F67264000C1B8B /* FindViewController.swift in Sources */,
 				4CF48B8725F130F900188AE5 /* AppDelegate.swift in Sources */,
 				4CF48B8925F130F900188AE5 /* SceneDelegate.swift in Sources */,

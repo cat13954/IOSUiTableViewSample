@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import WebKit
 //显示文章详情的页面
-class ArticleWebViewController: UIViewController {
+class ArticleWebViewController: BaseViewController {
     
     var articleUrl = ""
     

@@ -11,7 +11,7 @@ import SnapKit
 import Alamofire
 
 ///作者对应文章列表
-class ArticleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ArticleViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let cellID = "article"
     private var articleList = [Article]()

@@ -7,7 +7,7 @@
 
 import UIKit
 import SnapKit
-class ActivityViewController: UIViewController {
+class ActivityViewController: BaseViewController {
 
     private lazy var lab: UILabel = {
         let label = UILabel()

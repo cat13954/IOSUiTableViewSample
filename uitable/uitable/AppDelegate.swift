@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置导航器
         //let nav = UINavigationController(rootViewController: WxListController())
         //设置nav作为主窗口
-        //window?.rootViewController = nav
+       // window?.rootViewController = nav
         //显示主窗口(默认不显示)
         window?.makeKeyAndVisible()
         return true
