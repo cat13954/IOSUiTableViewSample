@@ -15,11 +15,11 @@ class MainViewController: UITabBarController {
     }
     
     func initTab() {
-        let homeVC = CustomNavigationControllerViewController(rootViewController: WxListController())
+        let homeVC = CustomNavigationControllerViewController(rootViewController: HomeViewController())
         homeVC.tabBarItem.title = "首页"
         homeVC.tabBarItem.image = UIImage(named: "tab_home_normal")
         
-        let activityVC = CustomNavigationControllerViewController(rootViewController: ActivityViewController())
+        let activityVC = CustomNavigationControllerViewController(rootViewController: WxListController())
         activityVC.tabBarItem.title = "沸点"
         activityVC.tabBarItem.image = UIImage(named: "tab_activity")
         
@@ -36,7 +36,7 @@ class MainViewController: UITabBarController {
         meVC.tabBarItem.image = UIImage(named: "tab_profile_normal")
         
         viewControllers = [homeVC, activityVC, findVC, ceVC, meVC]
-        setTabBarItemAttributes(fontName: "Courier", fontSize: 13, normalColor: ColorUtils.parser("#969695")!, selectedColor: ColorUtils.parser("#027AFF")!, bgColor: UIColor.white)
+        setTabBarItemAttributes(fontName: "Courier", fontSize: 12, normalColor: ColorUtils.parser("#969695")!, selectedColor: ColorUtils.parser("#027AFF")!, bgColor: UIColor.white)
     }
     
     func setTabBarItemAttributes(fontName: String = "Courier",
