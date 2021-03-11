@@ -17,4 +17,8 @@ class ApiConstant: NSObject {
         return "https://wanandroid.com/wxarticle/list/\(userID)/\(page)/json"
          
     }
+    
+    public static func getStoreIndexUrl() -> String{
+        return "http://106.52.55.28:8080/wx/home/index"
+    }
 }
