@@ -15,7 +15,7 @@ class MainViewController: UITabBarController {
     }
     
     func initTab() {
-        let homeVC = CustomNavigationControllerViewController(rootViewController: HomeViewController())
+        let homeVC = CustomNavigationControllerViewController(rootViewController: LDIndexViewController())
         homeVC.tabBarItem.title = "首页"
         homeVC.tabBarItem.image = UIImage(named: "tab_home_normal")
         
