@@ -57,6 +57,20 @@ class PreferentialCellTableViewCell: UITableViewCell {
         lab.textColor = ColorUtils.parser("#F35410")
         return lab
     }()
+    //标签
+    private lazy var labTag: DDPaddingLabel = {
+        let lab = DDPaddingLabel()
+        lab.font = lab.font.withSize(10)
+        //文字的颜色
+        lab.textColor = ColorUtils.parser("#818181")
+        
+        lab.layer.backgroundColor = ColorUtils.parser("#F6F6F6")?.cgColor
+        lab.layer.cornerRadius = 10
+        lab.textAlignment = .center
+        lab.padding.left = 6
+        lab.padding.right = 6
+        return lab
+    }()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -80,6 +94,7 @@ class PreferentialCellTableViewCell: UITableViewCell {
         addSubview(labPrice)
         addSubview(labStoreName)
         addSubview(labMoneyTag)
+        addSubview(labTag)
         //布局左边的封面图片
         imgCover.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(10)
@@ -121,6 +136,11 @@ class PreferentialCellTableViewCell: UITableViewCell {
             make.left.equalTo(labPrice.snp.right).offset(4)
             make.bottom.equalTo(labStoreName.snp.top).offset(-5)
         }
+        //标签
+        labTag.snp.makeConstraints { (make) in
+            make.left.equalTo(imgCover.snp.right).offset(10)
+            make.bottom.equalTo(labPrice.snp.top).offset(-3)
+        }
     }
     
     func setValueForCell(item: MapData) {
@@ -149,7 +169,8 @@ class PreferentialCellTableViewCell: UITableViewCell {
         
         //店铺名字
         labStoreName.text = "\(item.nick!)>"
-        
+        //tab
+        labTag.text = item.levelOneCategoryName
     }
     
     
