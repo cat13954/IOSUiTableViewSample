@@ -124,32 +124,31 @@ class PreferentialCellTableViewCell: UITableViewCell {
     }
     
     func setValueForCell(item: MapData) {
-        print("图地址:\(item.pictUrl)")
+        //print("图地址:\(item.pictUrl)")
         let url = "https:\(item.pictUrl ?? "")"
-        print(url)
+        //print(url)
         let u = URL(string: url)
+        //商品图片
         imgCover.kf.setImage(with: u)
+        //商品名字,只显示2行
         labGoodsName.text = item.title
-        //offPrise = ((itemData.zk_final_price.toFloat()) - itemData.coupon_amount)
         //开始价格
-        //labOriginalPrice.text = "原价:" + item.zkFinalPrice!
-        
         //处理中划线
         let original = "原价:" + item.zkFinalPrice!
         let priceString = NSMutableAttributedString.init(string: original)
         priceString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSNumber.init(value: 1), range: NSRange(location: 0, length: priceString.length))
+        //把处理中划线的值赋值
         labOriginalPrice.attributedText = priceString
         
         //优惠之后的
         let coupon = item.couponAmount
         let price = (item.zkFinalPrice! as NSString).floatValue
+        //取2位小数
         let finalPrice = String.init(format: "%.2f", (price - Float(coupon)))
-        
-        
         labPrice.text = "\(finalPrice)"
         
         //店铺名字
-        labStoreName.text = "\(item.nick!)>" ?? "淘宝店铺>"
+        labStoreName.text = "\(item.nick!)>"
         
     }
     

@@ -75,4 +75,9 @@ extension PreferentialViewController{
         cell.setValueForCell(item: preferentialList[indexPath.row])
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //禁止cell点击之后显示灰色
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 }
