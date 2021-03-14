@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class PreferentialCellTableViewCell: UITableViewCell {
     
     private lazy var imgCover: UIImageView = {

@@ -7,9 +7,12 @@
 
 import UIKit
 import Alamofire
+import ESPullToRefresh
 //领券联盟特惠页面.单纯的一个ui tab
 class PreferentialViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     let cellId = "PreferentialCell"
+    //默认加载第一页数据
+    private var currentPage = 1
     
     //当前全部数据
     private var preferentialList = [MapData]()
@@ -38,8 +41,21 @@ class PreferentialViewController: BaseViewController, UITableViewDelegate, UITab
             //宽度等于屏幕
             make.width.equalToSuperview()
         }
+        
+        //设置刷新es工具
+        uiTable.es.addPullToRefresh {
+            print("refresh??")
+            self.currentPage = 1
+            //下拉刷新的时候,我们获取第一页的数据
+            self.getData(page: self.currentPage)
+        }
+        uiTable.es.addInfiniteScrolling {
+            print("load more")
+        }
+        
         //加载第一页数据
-        getData(page: 1)
+        uiTable.es.startPullToRefresh()
+        //getData(page: 1)
     }
     
     func getData(page: Int) {
@@ -53,12 +69,16 @@ class PreferentialViewController: BaseViewController, UITableViewDelegate, UITab
                 //设置到数组中
                 if page == 1{
                     if let arr = result?.data?.tbkDgOptimusMaterialResponse?.resultList?.mapData {
+                        //清空全部数据
+                        self.preferentialList.removeAll()
                         self.preferentialList = arr
                     }
                     
                 }
                 //刷新列表
                 self.uiTable.reloadData()
+                //停止下拉刷新
+                self.uiTable.es.stopPullToRefresh()
             }
     }
     

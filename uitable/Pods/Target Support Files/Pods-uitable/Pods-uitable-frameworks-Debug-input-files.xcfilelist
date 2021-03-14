@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-uitable/Pods-uitable-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
