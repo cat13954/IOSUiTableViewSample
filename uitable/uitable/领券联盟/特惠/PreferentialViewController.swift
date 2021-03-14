@@ -51,6 +51,7 @@ class PreferentialViewController: BaseViewController, UITableViewDelegate, UITab
         }
         uiTable.es.addInfiniteScrolling {
             print("load more")
+            self.getData(page: self.currentPage)
         }
         
         //加载第一页数据
@@ -65,20 +66,28 @@ class PreferentialViewController: BaseViewController, UITableViewDelegate, UITab
                 //获取数据成功
                 let result = response.result.value
                 print("获取的数据page:\(page)")
-                print(result?.data?.tbkDgOptimusMaterialResponse?.resultList?.mapData?.count)
+                //print(result?.data?.tbkDgOptimusMaterialResponse?.resultList?.mapData?.count)
                 //设置到数组中
-                if page == 1{
-                    if let arr = result?.data?.tbkDgOptimusMaterialResponse?.resultList?.mapData {
+                if let arr = result?.data?.tbkDgOptimusMaterialResponse?.resultList?.mapData {
+                    if page == 1{
                         //清空全部数据
                         self.preferentialList.removeAll()
                         self.preferentialList = arr
+                        //停止下拉刷新
+                        self.uiTable.es.stopPullToRefresh()
+                    } else{
+                        //不是第一页的时候,我们需要把获取到的数据,加入到之前的数组中
+                        
+                        self.preferentialList += arr
+                        self.uiTable.es.stopLoadingMore()
                     }
-                    
+                    self.currentPage += 1
+                    //刷新列表
+                    self.uiTable.reloadData()
+                } else {
+                    //返回的数据是空的,那就没有数据了
+                    self.uiTable.es.noticeNoMoreData()
                 }
-                //刷新列表
-                self.uiTable.reloadData()
-                //停止下拉刷新
-                self.uiTable.es.stopPullToRefresh()
             }
     }
     
