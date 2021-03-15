@@ -22,6 +22,7 @@
 		4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F006825F264CD007BCEB0 /* BeanWxList.swift */; };
 		4C9F007125F2684C007BCEB0 /* WxListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F007025F2684C007BCEB0 /* WxListController.swift */; };
 		4C9F007625F26CA5007BCEB0 /* CellWxAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F007525F26CA5007BCEB0 /* CellWxAuthor.swift */; };
+		4CAC163B25FF928C0099F8F6 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC163A25FF928C0099F8F6 /* UITableView+Extension.swift */; };
 		4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEE82F25F8FD7C00AA395F /* BaseViewController.swift */; };
 		4CDEE83525F8FE7200AA395F /* CustomNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEE83425F8FE7200AA395F /* CustomNavigationControllerViewController.swift */; };
 		4CEC695E25FBA5AF00D70B7E /* UnionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC695D25FBA5AF00D70B7E /* UnionApi.swift */; };
@@ -75,6 +76,7 @@
 		4C9F006825F264CD007BCEB0 /* BeanWxList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanWxList.swift; sourceTree = "<group>"; };
 		4C9F007025F2684C007BCEB0 /* WxListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WxListController.swift; sourceTree = "<group>"; };
 		4C9F007525F26CA5007BCEB0 /* CellWxAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWxAuthor.swift; sourceTree = "<group>"; };
+		4CAC163A25FF928C0099F8F6 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		4CDEE82F25F8FD7C00AA395F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4CDEE83425F8FE7200AA395F /* CustomNavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationControllerViewController.swift; sourceTree = "<group>"; };
 		4CEC695D25FBA5AF00D70B7E /* UnionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionApi.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		4C3B073325FC834B00B35421 /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				4CAC163A25FF928C0099F8F6 /* UITableView+Extension.swift */,
 				4C3B073425FC836A00B35421 /* DDPaddingLabel.swift */,
 			);
 			path = widget;
@@ -505,6 +508,7 @@
 				4C97417B25F66FE4000C1B8B /* MainViewController.swift in Sources */,
 				4CF48BD325F1337B00188AE5 /* ColorUtils.swift in Sources */,
 				4C97418325F6707E000C1B8B /* HomeViewController.swift in Sources */,
+				4CAC163B25FF928C0099F8F6 /* UITableView+Extension.swift in Sources */,
 				4CF48BCE25F1333500188AE5 /* CellLoopDetail.swift in Sources */,
 				4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */,
 				4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */,

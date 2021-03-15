@@ -95,6 +95,13 @@ class PreferentialViewController: BaseViewController, UITableViewDelegate, UITab
 extension PreferentialViewController{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //返回数组的大小
+        if preferentialList.isEmpty {
+            tableView.separatorStyle = .none
+            tableView.setEmptyDataView(image: UIImage(systemName: "tortoise") ?? UIImage(), title: "推荐商品正在赶来")
+        }else{
+            tableView.separatorStyle = .singleLine
+            tableView.removeEmptyDataView()
+        }
         return preferentialList.count
     }
     
@@ -104,7 +111,7 @@ extension PreferentialViewController{
         cell.setValueForCell(item: preferentialList[indexPath.row])
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //禁止cell点击之后显示灰色
         tableView.deselectRow(at: indexPath, animated: false)
