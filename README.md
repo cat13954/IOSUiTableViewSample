@@ -7,6 +7,8 @@
 - uitableview的案例
 ### 最新特惠商品列表
 
+![image](//https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/Xnip2021-03-17_22-15-03)
+
 
 ![image](//https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/Xnip2021-03-13_10-09-34.png)
 >公众号列表
