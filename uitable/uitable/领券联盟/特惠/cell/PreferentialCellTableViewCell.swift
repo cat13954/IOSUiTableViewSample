@@ -158,10 +158,8 @@ class PreferentialCellTableViewCell: UITableViewCell {
         //开始价格
         //处理中划线
         let original = "原价:" + item.zkFinalPrice!
-        let priceString = NSMutableAttributedString.init(string: original)
-        priceString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSNumber.init(value: 1), range: NSRange(location: 0, length: priceString.length))
         //把处理中划线的值赋值
-        labOriginalPrice.attributedText = priceString
+        labOriginalPrice.attributedText = AppFontUtils.strikethroughStyle(content: original)
         
         //优惠之后的
         let coupon = item.couponAmount
