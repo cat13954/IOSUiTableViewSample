@@ -36,7 +36,7 @@ class MainViewController: UITabBarController {
         meVC.tabBarItem.image = UIImage(named: "tab_profile_normal")
         
         viewControllers = [homeVC, activityVC, findVC, ceVC, meVC]
-        setTabBarItemAttributes(fontName: "Courier", fontSize: 12, normalColor: ColorUtils.parser("#969695")!, selectedColor: ColorUtils.parser("#027AFF")!, bgColor: UIColor.white)
+        setTabBarItemAttributes(fontName: "Courier", fontSize: 12, normalColor: ColorUtils.parser("#969695"), selectedColor: ColorUtils.parser("#027AFF"), bgColor: UIColor.white)
     }
     
     func setTabBarItemAttributes(fontName: String = "Courier",

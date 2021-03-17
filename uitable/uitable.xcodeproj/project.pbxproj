@@ -25,6 +25,7 @@
 		4CAC163B25FF928C0099F8F6 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC163A25FF928C0099F8F6 /* UITableView+Extension.swift */; };
 		4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEE82F25F8FD7C00AA395F /* BaseViewController.swift */; };
 		4CDEE83525F8FE7200AA395F /* CustomNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEE83425F8FE7200AA395F /* CustomNavigationControllerViewController.swift */; };
+		4CE2233D26023DE100F4C43D /* AppFontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2233C26023DE100F4C43D /* AppFontUtils.swift */; };
 		4CEC695E25FBA5AF00D70B7E /* UnionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC695D25FBA5AF00D70B7E /* UnionApi.swift */; };
 		4CEC696B25FBA69300D70B7E /* PreferentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC696A25FBA69300D70B7E /* PreferentialViewController.swift */; };
 		4CEC697D25FBA95A00D70B7E /* RootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC697725FBA95900D70B7E /* RootClass.swift */; };
@@ -79,6 +80,7 @@
 		4CAC163A25FF928C0099F8F6 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		4CDEE82F25F8FD7C00AA395F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4CDEE83425F8FE7200AA395F /* CustomNavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationControllerViewController.swift; sourceTree = "<group>"; };
+		4CE2233C26023DE100F4C43D /* AppFontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFontUtils.swift; sourceTree = "<group>"; };
 		4CEC695D25FBA5AF00D70B7E /* UnionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionApi.swift; sourceTree = "<group>"; };
 		4CEC696A25FBA69300D70B7E /* PreferentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferentialViewController.swift; sourceTree = "<group>"; };
 		4CEC697725FBA95900D70B7E /* RootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootClass.swift; sourceTree = "<group>"; };
@@ -190,6 +192,15 @@
 			path = BaseControllers;
 			sourceTree = "<group>";
 		};
+		4CE2233B26023DBE00F4C43D /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				4CF48BD225F1337B00188AE5 /* ColorUtils.swift */,
+				4CE2233C26023DE100F4C43D /* AppFontUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		4CEC695C25FBA58700D70B7E /* 领券联盟 */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +269,7 @@
 		4CF48B8525F130F900188AE5 /* uitable */ = {
 			isa = PBXGroup;
 			children = (
+				4CE2233B26023DBE00F4C43D /* utils */,
 				4C3B073325FC834B00B35421 /* widget */,
 				4CEC695C25FBA58700D70B7E /* 领券联盟 */,
 				4CDEE82E25F8FD4F00AA395F /* BaseControllers */,
@@ -271,7 +283,6 @@
 				4CF48B9125F130F900188AE5 /* LaunchScreen.storyboard */,
 				4CF48B9425F130F900188AE5 /* Info.plist */,
 				4CF48BCD25F1333500188AE5 /* CellLoopDetail.swift */,
-				4CF48BD225F1337B00188AE5 /* ColorUtils.swift */,
 				4CF48BD725F133E200188AE5 /* WeatherResponse.swift */,
 			);
 			path = uitable;
@@ -493,6 +504,7 @@
 				4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */,
 				4C3B073525FC836A00B35421 /* DDPaddingLabel.swift in Sources */,
 				4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */,
+				4CE2233D26023DE100F4C43D /* AppFontUtils.swift in Sources */,
 				4CEC695E25FBA5AF00D70B7E /* UnionApi.swift in Sources */,
 				4C97418825F671E5000C1B8B /* ActivityViewController.swift in Sources */,
 				4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */,

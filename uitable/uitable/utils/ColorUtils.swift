@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 class ColorUtils: NSObject {
-    public static func parser(_ color: String) -> UIColor? {
+    public static func parser(_ color: String) -> UIColor {
         if color.count <= 0 || color.count != 7 || color == "(null)" || color == "<null>" {
-            return nil
+            return UIColor.black
         }
         var red: UInt32 = 0x0
         var green: UInt32 = 0x0

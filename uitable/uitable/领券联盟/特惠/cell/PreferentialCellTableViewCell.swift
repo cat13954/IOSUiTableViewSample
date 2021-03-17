@@ -10,6 +10,7 @@ import UIKit
 
 class PreferentialCellTableViewCell: UITableViewCell {
     
+    //商品封面
     private lazy var imgCover: UIImageView = {
         let img = UIImageView()
         img.layer.cornerRadius = 5
@@ -39,7 +40,7 @@ class PreferentialCellTableViewCell: UITableViewCell {
     //最后价格
     private lazy var labPrice: UILabel = {
         let lab = UILabel()
-        lab.font = lab.font.withSize(15)
+        lab.font = lab.font.withSize(10)
         lab.textColor = ColorUtils.parser("#F35410")
         return lab
     }()
@@ -54,7 +55,7 @@ class PreferentialCellTableViewCell: UITableViewCell {
     private lazy var labMoneyTag: UILabel = {
         let lab = UILabel()
         lab.font = lab.font.withSize(10)
-        lab.text = "¥"
+        //lab.text = "¥"
         lab.textColor = ColorUtils.parser("#F35410")
         return lab
     }()
@@ -65,7 +66,7 @@ class PreferentialCellTableViewCell: UITableViewCell {
         //文字的颜色
         lab.textColor = ColorUtils.parser("#818181")
         
-        lab.layer.backgroundColor = ColorUtils.parser("#F6F6F6")?.cgColor
+        lab.layer.backgroundColor = ColorUtils.parser("#F6F6F6").cgColor
         lab.layer.cornerRadius = 10
         lab.textAlignment = .center
         lab.padding.left = 6
@@ -118,17 +119,18 @@ class PreferentialCellTableViewCell: UITableViewCell {
             make.bottom.equalTo(imgCover.snp.bottom)
         }
         
-
+        
         
         
         //💰符号
-        labMoneyTag.snp.makeConstraints { (make) in
-            make.left.equalTo(imgCover.snp.right).offset(10)
-            make.bottom.equalTo(labStoreName.snp.top).offset(-4)
-        }
+        //labMoneyTag.snp.makeConstraints { (make) in
+        //    make.left.equalTo(imgCover.snp.right).offset(10)
+        //    make.bottom.equalTo(labStoreName.snp.top).offset(-4)
+        //}
         //优惠之后的价格
         labPrice.snp.makeConstraints { (make) in
-            make.left.equalTo(labMoneyTag.snp.right).offset(0)
+            //make.left.equalTo(labMoneyTag.snp.right).offset(0)
+            make.left.equalTo(imgCover.snp.right).offset(10)
             make.bottom.equalTo(labStoreName.snp.top).offset(-3)
         }
         
@@ -166,7 +168,10 @@ class PreferentialCellTableViewCell: UITableViewCell {
         let price = (item.zkFinalPrice! as NSString).floatValue
         //取2位小数
         let finalPrice = String.init(format: "%.2f", (price - Float(coupon)))
-        labPrice.text = "\(finalPrice)"
+        let priceContent = "¥\(finalPrice)"
+        
+        //高矮处理,把$和价格都放进来一起处理
+        labPrice.attributedText  = AppFontUtils.formatThePrice(priceContent: priceContent, tagFontSize: UIFont.systemFont(ofSize: 10), priceFontSize:UIFont.boldSystemFont(ofSize: 14), textColor: ColorUtils.parser("#F35410"))
         
         //店铺名字
         labStoreName.text = "\(item.nick!)>"
