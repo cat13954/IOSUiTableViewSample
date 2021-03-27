@@ -206,7 +206,7 @@ class GoodsDetailControllerViewController: BaseViewController {
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().offset(-12)
             make.height.equalTo(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
         btnCopy.addTarget(self, action: #selector(copyToPasteboard), for: .touchUpInside )
         //优惠券显示
