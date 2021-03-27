@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */; };
 		4C824B05260F2D2B001F0654 /* CouponsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B02260F2D2B001F0654 /* CouponsData.swift */; };
 		4C824B0A260F2D97001F0654 /* CouponsPara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B09260F2D97001F0654 /* CouponsPara.swift */; };
+		4C824B10260F479D001F0654 /* SimpleButton in Frameworks */ = {isa = PBXBuildFile; productRef = 4C824B0F260F479D001F0654 /* SimpleButton */; };
 		4C8470FD260EC394008C5B48 /* GoodsDetailControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8470FC260EC394008C5B48 /* GoodsDetailControllerViewController.swift */; };
 		4C97417B25F66FE4000C1B8B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97417A25F66FE4000C1B8B /* MainViewController.swift */; };
 		4C97418325F6707E000C1B8B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97418225F6707E000C1B8B /* HomeViewController.swift */; };
@@ -128,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C824B10260F479D001F0654 /* SimpleButton in Frameworks */,
 				FE43D740741E68CE240C7BF4 /* Pods_uitable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +386,9 @@
 			dependencies = (
 			);
 			name = uitable;
+			packageProductDependencies = (
+				4C824B0F260F479D001F0654 /* SimpleButton */,
+			);
 			productName = uitable;
 			productReference = 4CF48B8325F130F900188AE5 /* uitable.app */;
 			productType = "com.apple.product-type.application";
@@ -455,6 +460,9 @@
 				Base,
 			);
 			mainGroup = 4CF48B7A25F130F800188AE5;
+			packageReferences = (
+				4C824B0E260F479D001F0654 /* XCRemoteSwiftPackageReference "SimpleButton" */,
+			);
 			productRefGroup = 4CF48B8425F130F900188AE5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -905,6 +913,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C824B0E260F479D001F0654 /* XCRemoteSwiftPackageReference "SimpleButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/allaboutapps/SimpleButton.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C824B0F260F479D001F0654 /* SimpleButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C824B0E260F479D001F0654 /* XCRemoteSwiftPackageReference "SimpleButton" */;
+			productName = SimpleButton;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4CF48B7B25F130F800188AE5 /* Project object */;
 }

@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Alamofire
+import SimpleButton
 let width = UIScreen.main.bounds.size.width
 let height = UIScreen.main.bounds.size.height
 //商品详情页面
@@ -195,6 +196,11 @@ class GoodsDetailControllerViewController: BaseViewController {
             labStoreName.text = "\(name)>"
         }
         //显示复制按钮.
+        let btnCopy = SimpleButton(type: .custom)
+        btnCopy.setTitle("复制到粘贴板", for: .normal)
+        btnCopy.setBackgroundColor(ColorUtils.parser("#FFAA02"), for: .normal, animated: true, animationDuration: 0.2)
+        btnCopy.setBackgroundColor(ColorUtils.parser("#FFBE00"), for: .highlighted, animated: true, animationDuration: 0.2)
+        btnCopy.setCornerRadius(4)
         view.addSubview(btnCopy)
         btnCopy.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(12)
@@ -202,11 +208,10 @@ class GoodsDetailControllerViewController: BaseViewController {
             make.height.equalTo(50)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
-        btnCopy.setTitle("复制到粘贴板", for: UIControl.State.init())
-        btnCopy.setTitleColor(ColorUtils.parser("#CCCCCC"), for: UIControl.State.highlighted)
-        btnCopy.backgroundColor = ColorUtils.parser("#FFAA02")
-        btnCopy.layer.cornerRadius = 4
-        
+//        setBackgroundColor(UIColor.peterRiverColor(), for: .normal, animated: true, animationDuration: 0.2)
+//                setBackgroundColor(UIColor.belizeHoleColor(), for: .highlighted, animated: false)
+//                setBackgroundColor(UIColor.nephritisColor(), for: SimpleButtonControlState.loading)
+//                setTitle("BACKGROUND COLOR", for: .normal)
         //优惠券显示
         view.addSubview(labCouponContent)
         labCouponContent.snp.makeConstraints { (make) in

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SimpleButton",
+        "repositoryURL": "https://github.com/allaboutapps/SimpleButton.git",
+        "state": {
+          "branch": null,
+          "revision": "3064024047a7bc1bfd440ae23b304b9e5f6ca681",
+          "version": "5.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
