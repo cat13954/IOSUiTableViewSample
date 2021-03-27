@@ -17,6 +17,7 @@ class PreferentialCellTableViewCell: UITableViewCell {
         img.layer.masksToBounds = true
         img.layer.borderWidth = 1
         img.layer.borderColor = UIColor.white.cgColor
+        img.contentMode = .scaleAspectFit
         return img
     }()
     

@@ -7,14 +7,18 @@
 
 import UIKit
 import Kingfisher
-
+import SnapKit
 class CustomCollectionViewCell: UICollectionViewCell {
     private lazy var imageView = UIImageView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        imageView.frame = contentView.bounds
+        //imageView.frame = contentView.bounds
         contentView.addSubview(imageView)
+        imageView.contentMode = .scaleAspectFit
+        imageView.snp.makeConstraints { (make) in
+            make.size.equalTo(contentView.snp.size)
+        }
     }
 
     @available(*, unavailable)
