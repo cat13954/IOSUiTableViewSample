@@ -221,7 +221,47 @@ class GoodsDetailControllerViewController: BaseViewController {
     }
     // 复制到粘贴板中
     @objc func copyToPasteboard(sender: UIButton){
-        UIPasteboard.general.string = self.labCouponContent.text
+        //UIPasteboard.general.string = self.labCouponContent.text
+        let pboard = UIPasteboard.general
+        pboard.string = self.labCouponContent.text
+        
+        let titleStr = "淘口令复制成功，是否跳转到手机淘宝APP？"
+        let jumpStr = "taobao://item.taobao.com/item.htm"
+        
+        
+        let alertCtr = UIAlertController.init(title: titleStr, message: nil, preferredStyle: UIAlertController.Style.alert)
+        alertCtr.addAction(UIAlertAction.init(title: "取消", style: UIAlertAction.Style.cancel, handler: nil))
+        alertCtr.addAction(UIAlertAction.init(title: "确定", style: UIAlertAction.Style.default, handler: { (action) in
+            
+            if let url = URL.init(string: jumpStr) {
+                
+                if UIApplication.shared.canOpenURL(url) == true {
+                    UIApplication.shared.openURL(url)
+                } else {
+                    
+                    let alertC = UIAlertController.init(title: "您未安装手机淘宝APP,是否前往AppStore下载安装？", message: nil, preferredStyle: UIAlertController.Style.alert)
+                    
+                    alertC.addAction(UIAlertAction.init(title: "取消", style: UIAlertAction.Style.cancel, handler: nil))
+                    alertC.addAction(UIAlertAction.init(title: "确定", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
+                        
+                        let AppStoreVC = UIViewController.init()
+                        AppStoreVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                        
+                        let webView = UIWebView.init(frame: AppStoreVC.view.bounds)
+                        let request = NSURLRequest.init(url: URL.init(string: "itms-apps://itunes.apple.com/cn/app/tao-bao-sui-shi-sui-xiang/id387682726?mt=8")!) //AppStore手机淘宝地址
+                        webView.loadRequest(request as URLRequest)
+                        AppStoreVC.view.addSubview(webView)
+                        
+                        self.present(AppStoreVC, animated: true, completion: {
+                            AppStoreVC.dismiss(animated: true, completion: nil)
+                        })
+                    }))
+                    self.present(alertC, animated: true, completion: nil)
+                    
+                }
+            }
+        }))
+        self.present(alertCtr, animated: true, completion: nil)
     }
     
     func getCoupons() {
