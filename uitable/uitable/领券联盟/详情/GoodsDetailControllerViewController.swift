@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Alamofire
 let width = UIScreen.main.bounds.size.width
 let height = UIScreen.main.bounds.size.height
 //商品详情页面
@@ -86,6 +87,28 @@ class GoodsDetailControllerViewController: BaseViewController {
         lab.font = lab.font.withSize(12)
         lab.textColor = ColorUtils.parser("#818181")
         return lab
+    }()
+    
+    private lazy var labCouponContent: DDPaddingLabel = {
+        let lab = DDPaddingLabel()
+        lab.font = lab.font.withSize(12)
+        //文字的颜色
+        lab.textColor = ColorUtils.parser("#818181")
+        lab.numberOfLines = 0
+        lab.layer.backgroundColor = ColorUtils.parser("#F6F6F6").cgColor
+        lab.layer.cornerRadius = 10
+        lab.textAlignment = .center
+        lab.padding.left = 6
+        lab.padding.right = 6
+        lab.lineBreakMode = .byWordWrapping
+        return lab
+    }()
+    
+    private lazy var btnCopy: UIButton = {
+        let btn = UIButton()
+        
+        return btn
+        
     }()
     
     override func viewDidLoad() {
@@ -171,9 +194,50 @@ class GoodsDetailControllerViewController: BaseViewController {
         if let name = goodsData?.nick {
             labStoreName.text = "\(name)>"
         }
+        //显示复制按钮.
+        view.addSubview(btnCopy)
+        btnCopy.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().offset(-12)
+            make.height.equalTo(50)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
+        btnCopy.setTitle("复制到粘贴板", for: UIControl.State.init())
+        btnCopy.setTitleColor(ColorUtils.parser("#CCCCCC"), for: UIControl.State.highlighted)
+        btnCopy.backgroundColor = ColorUtils.parser("#FFAA02")
+        btnCopy.layer.cornerRadius = 4
         
+        //优惠券显示
+        view.addSubview(labCouponContent)
+        labCouponContent.snp.makeConstraints { (make) in
+            make.top.equalTo(labStoreName.snp.bottom).offset(14)
+            //make.width.equalToSuperview().dividedBy(0.6)
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().offset(-12)
+        }
+        //获取优惠券
+        getCoupons()
     }
     
+    func getCoupons() {
+        //获取优惠券
+        //let paraData = CouponsPara(title: goodsData?.title ?? "", url: goodsData?.couponClickUrl ?? "")
+        let clickUrl = goodsData?.couponClickUrl ?? ""
+        let targetUrl = "https:\(clickUrl)"
+        let paraData: NSDictionary = ["title":goodsData?.title ?? "", "url":targetUrl]
+        let headers = [
+            "Content-Type": "application/json"
+        ]
+         
+        Alamofire.request(UnionApi.getCouponsUrl(), method: .post, parameters: paraData as! Parameters,encoding: JSONEncoding.default, headers: headers).responseObject{  (response: DataResponse<CouponsResult>) in
+            let data = response.result.value
+            print(data?.data?.tbkTpwdCreateResponse?.data?.model)
+            //显示优惠券数据
+            if let model = data?.data?.tbkTpwdCreateResponse?.data?.model{
+                self.labCouponContent.text = model
+            }
+        }
+    }
     
     
     
@@ -191,10 +255,10 @@ extension GoodsDetailControllerViewController: ZCycleViewProtocol{
         return cell
     }
     func cycleViewConfigurePageControl(_ cycleView: ZCycleView, pageControl: ZPageControl) {
-            pageControl.isHidden = false
-            pageControl.currentPageIndicatorTintColor = .red
-            pageControl.pageIndicatorTintColor = .green
-            pageControl.frame = CGRect(x: 0, y: cycleView.bounds.height-25, width: cycleView.bounds.width, height: 25)
-        }
+        pageControl.isHidden = false
+        pageControl.currentPageIndicatorTintColor = .red
+        pageControl.pageIndicatorTintColor = .green
+        pageControl.frame = CGRect(x: 0, y: cycleView.bounds.height-25, width: cycleView.bounds.width, height: 25)
+    }
     
 }

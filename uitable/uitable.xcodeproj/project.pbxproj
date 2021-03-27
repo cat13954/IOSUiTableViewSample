@@ -12,6 +12,10 @@
 		4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B180125F39B900055C16C /* CellArticleDetail.swift */; };
 		4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C38393025F5123400A8294E /* ArticleWebViewController.swift */; };
 		4C3B073525FC836A00B35421 /* DDPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B073425FC836A00B35421 /* DDPaddingLabel.swift */; };
+		4C824B03260F2D2B001F0654 /* CouponsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B00260F2D2B001F0654 /* CouponsResult.swift */; };
+		4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */; };
+		4C824B05260F2D2B001F0654 /* CouponsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B02260F2D2B001F0654 /* CouponsData.swift */; };
+		4C824B0A260F2D97001F0654 /* CouponsPara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B09260F2D97001F0654 /* CouponsPara.swift */; };
 		4C8470FD260EC394008C5B48 /* GoodsDetailControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8470FC260EC394008C5B48 /* GoodsDetailControllerViewController.swift */; };
 		4C97417B25F66FE4000C1B8B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97417A25F66FE4000C1B8B /* MainViewController.swift */; };
 		4C97418325F6707E000C1B8B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97418225F6707E000C1B8B /* HomeViewController.swift */; };
@@ -72,6 +76,10 @@
 		4C1B180125F39B900055C16C /* CellArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellArticleDetail.swift; sourceTree = "<group>"; };
 		4C38393025F5123400A8294E /* ArticleWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewController.swift; sourceTree = "<group>"; };
 		4C3B073425FC836A00B35421 /* DDPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPaddingLabel.swift; sourceTree = "<group>"; };
+		4C824B00260F2D2B001F0654 /* CouponsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsResult.swift; sourceTree = "<group>"; };
+		4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsTbkTpwdCreateResponse.swift; sourceTree = "<group>"; };
+		4C824B02260F2D2B001F0654 /* CouponsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsData.swift; sourceTree = "<group>"; };
+		4C824B09260F2D97001F0654 /* CouponsPara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsPara.swift; sourceTree = "<group>"; };
 		4C8470FC260EC394008C5B48 /* GoodsDetailControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsDetailControllerViewController.swift; sourceTree = "<group>"; };
 		4C97417A25F66FE4000C1B8B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4C97418225F6707E000C1B8B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -164,9 +172,21 @@
 			path = widget;
 			sourceTree = "<group>";
 		};
+		4C824AF3260F2C68001F0654 /* bean */ = {
+			isa = PBXGroup;
+			children = (
+				4C824B02260F2D2B001F0654 /* CouponsData.swift */,
+				4C824B00260F2D2B001F0654 /* CouponsResult.swift */,
+				4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */,
+				4C824B09260F2D97001F0654 /* CouponsPara.swift */,
+			);
+			path = bean;
+			sourceTree = "<group>";
+		};
 		4C8470FB260EC35E008C5B48 /* 详情 */ = {
 			isa = PBXGroup;
 			children = (
+				4C824AF3260F2C68001F0654 /* bean */,
 				4C8470FC260EC394008C5B48 /* GoodsDetailControllerViewController.swift */,
 				4CB538ED260ECD3000569649 /* CustomCollectionViewCell.swift */,
 			);
@@ -524,6 +544,7 @@
 				4CF48B8B25F130F900188AE5 /* ViewController.swift in Sources */,
 				4CDEE83525F8FE7200AA395F /* CustomNavigationControllerViewController.swift in Sources */,
 				4C9F007625F26CA5007BCEB0 /* CellWxAuthor.swift in Sources */,
+				4C824B03260F2D2B001F0654 /* CouponsResult.swift in Sources */,
 				4CEC697D25FBA95A00D70B7E /* RootClass.swift in Sources */,
 				4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */,
 				4C3B073525FC836A00B35421 /* DDPaddingLabel.swift in Sources */,
@@ -533,8 +554,10 @@
 				4C97418825F671E5000C1B8B /* ActivityViewController.swift in Sources */,
 				4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */,
 				4C97418D25F67264000C1B8B /* FindViewController.swift in Sources */,
+				4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */,
 				4CF48B8725F130F900188AE5 /* AppDelegate.swift in Sources */,
 				4CEC696B25FBA69300D70B7E /* PreferentialViewController.swift in Sources */,
+				4C824B05260F2D2B001F0654 /* CouponsData.swift in Sources */,
 				4CB538E9260ECC0200569649 /* ZPageControl.swift in Sources */,
 				4CB538E4260ECBD400569649 /* ZCycleView.swift in Sources */,
 				4CF48B8925F130F900188AE5 /* SceneDelegate.swift in Sources */,
@@ -543,6 +566,7 @@
 				4C97419725F6727E000C1B8B /* MeViewController.swift in Sources */,
 				4CB538DF260ECB8C00569649 /* ZCycleLayout.swift in Sources */,
 				4CF48BD825F133E200188AE5 /* WeatherResponse.swift in Sources */,
+				4C824B0A260F2D97001F0654 /* CouponsPara.swift in Sources */,
 				4C97419225F67270000C1B8B /* CeViewController.swift in Sources */,
 				4CB538EE260ECD3000569649 /* CustomCollectionViewCell.swift in Sources */,
 				4C97417B25F66FE4000C1B8B /* MainViewController.swift in Sources */,

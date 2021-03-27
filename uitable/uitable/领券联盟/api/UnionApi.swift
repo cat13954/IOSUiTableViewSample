@@ -15,7 +15,11 @@ class UnionApi: NSObject {
     }
     
     //获取特惠数据,传递page
-    public static func getPreferentialUrl(page: Int) -> String{
-        return getBaseUrl()+"/onSell/\(page)";
+    public static func getPreferentialUrl(page: Int) -> String {
+        return getBaseUrl() + "/onSell/\(page)";
+    }
+    
+    public static func getCouponsUrl() -> String {
+        return getBaseUrl() + "/tpwd";
     }
 }
