@@ -7,6 +7,7 @@
 - uitableview的案例
 
 ### 商品详情页面
+![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/taobao-dialog.png)
 ![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/Xnip2021-03-27_12-43-55.png)
 ![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/open-taobao.gif)
 ### 最新特惠商品列表
