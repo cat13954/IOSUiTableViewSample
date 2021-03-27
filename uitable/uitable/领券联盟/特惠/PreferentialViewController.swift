@@ -115,5 +115,12 @@ extension PreferentialViewController{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //禁止cell点击之后显示灰色
         tableView.deselectRow(at: indexPath, animated: false)
+        //进入详情页面
+        let goodsVC = GoodsDetailControllerViewController()
+        if let imgs = preferentialList[indexPath.row].smallImages?.string{
+            goodsVC.images = imgs
+        }
+        
+        navigationController?.pushViewController(goodsVC, animated: true)
     }
 }

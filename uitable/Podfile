@@ -11,6 +11,7 @@ target 'uitable' do
     pod 'SnapKit', '~> 5.0.1'
     pod 'Kingfisher', '~> 6.0'
     pod 'ESPullToRefresh'
+    #pod 'ZCycleView', '1.0.2'
    
 
 end
