@@ -67,7 +67,7 @@ class GoodsDetailControllerViewController: BaseViewController {
         lab.textColor = ColorUtils.parser("#818181")
         
         lab.layer.backgroundColor = ColorUtils.parser("#F6F6F6").cgColor
-        lab.layer.cornerRadius = 10
+        lab.layer.cornerRadius = 4
         lab.textAlignment = .center
         lab.padding.left = 6
         lab.padding.right = 6
@@ -97,7 +97,7 @@ class GoodsDetailControllerViewController: BaseViewController {
         lab.textColor = ColorUtils.parser("#818181")
         lab.numberOfLines = 0
         lab.layer.backgroundColor = ColorUtils.parser("#F6F6F6").cgColor
-        lab.layer.cornerRadius = 10
+        lab.layer.cornerRadius = 4
         lab.textAlignment = .center
         lab.padding.left = 6
         lab.padding.right = 6
@@ -208,20 +208,20 @@ class GoodsDetailControllerViewController: BaseViewController {
             make.height.equalTo(50)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
-//        setBackgroundColor(UIColor.peterRiverColor(), for: .normal, animated: true, animationDuration: 0.2)
-//                setBackgroundColor(UIColor.belizeHoleColor(), for: .highlighted, animated: false)
-//                setBackgroundColor(UIColor.nephritisColor(), for: SimpleButtonControlState.loading)
-//                setTitle("BACKGROUND COLOR", for: .normal)
+        btnCopy.addTarget(self, action: #selector(copyToPasteboard), for: .touchUpInside )
         //优惠券显示
         view.addSubview(labCouponContent)
         labCouponContent.snp.makeConstraints { (make) in
             make.top.equalTo(labStoreName.snp.bottom).offset(14)
-            //make.width.equalToSuperview().dividedBy(0.6)
             make.left.equalToSuperview().offset(12)
             make.right.equalToSuperview().offset(-12)
         }
         //获取优惠券
         getCoupons()
+    }
+    // 复制到粘贴板中
+    @objc func copyToPasteboard(sender: UIButton){
+        UIPasteboard.general.string = self.labCouponContent.text
     }
     
     func getCoupons() {
@@ -233,7 +233,7 @@ class GoodsDetailControllerViewController: BaseViewController {
         let headers = [
             "Content-Type": "application/json"
         ]
-         
+        
         Alamofire.request(UnionApi.getCouponsUrl(), method: .post, parameters: paraData as! Parameters,encoding: JSONEncoding.default, headers: headers).responseObject{  (response: DataResponse<CouponsResult>) in
             let data = response.result.value
             print(data?.data?.tbkTpwdCreateResponse?.data?.model)
