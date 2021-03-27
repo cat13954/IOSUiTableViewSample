@@ -25,7 +25,7 @@ class PreferentialCellTableViewCell: UITableViewCell {
     private lazy var labGoodsName: UILabel = {
         let lab = UILabel()
         lab.numberOfLines = 2
-        lab.font = lab.font.withSize(14)
+        lab.font = UIFont.boldSystemFont(ofSize: 14)
         lab.textColor = ColorUtils.parser("#151617")
         return lab
     }()

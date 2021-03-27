@@ -120,7 +120,7 @@ extension PreferentialViewController{
         if let imgs = preferentialList[indexPath.row].smallImages?.string{
             goodsVC.images = imgs
         }
-        
+        goodsVC.goodsData = preferentialList[indexPath.row]
         navigationController?.pushViewController(goodsVC, animated: true)
     }
 }
