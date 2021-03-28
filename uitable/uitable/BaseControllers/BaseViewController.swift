@@ -34,9 +34,9 @@ class BaseViewController: UIViewController {
         navigationItem.backBarButtonItem?.tintColor = .black
         
         
-        // 设置导航栏背景为透明色图片
+        //设置导航栏背景为透明色图片
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        // 设置导航栏阴影为透明色图片
+        //设置导航栏阴影为透明色图片
         navigationController?.navigationBar.shadowImage = UIImage()
         
     }
