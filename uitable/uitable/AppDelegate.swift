@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //window?.rootViewController = WxListController()
         //window?.rootViewController = ArticleWebViewController()
         window?.rootViewController = MainViewController()
+//        window?.rootViewController = ZFDemoViewController()
         //设置导航器
         //let nav = UINavigationController(rootViewController: WxListController())
         //设置nav作为主窗口

@@ -15,6 +15,8 @@ class MainViewController: UITabBarController {
     }
     
     func initTab() {
+        //ZFDemoViewController
+        //PreferentialViewController
         let homeVC = CustomNavigationControllerViewController(rootViewController: PreferentialViewController())
         homeVC.tabBarItem.title = "首页"
         homeVC.tabBarItem.image = UIImage(named: "tab_home_normal")
@@ -35,7 +37,7 @@ class MainViewController: UITabBarController {
         meVC.tabBarItem.title = "我的"
         meVC.tabBarItem.image = UIImage(named: "tab_profile_normal")
         
-        viewControllers = [homeVC, activityVC, findVC, ceVC, meVC]
+        viewControllers = [meVC, activityVC, findVC, ceVC, homeVC]
         setTabBarItemAttributes(fontName: "Courier", fontSize: 12, normalColor: ColorUtils.parser("#969695"), selectedColor: ColorUtils.parser("#027AFF"), bgColor: UIColor.white)
     }
     

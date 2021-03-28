@@ -12,6 +12,16 @@
 		4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B180125F39B900055C16C /* CellArticleDetail.swift */; };
 		4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C38393025F5123400A8294E /* ArticleWebViewController.swift */; };
 		4C3B073525FC836A00B35421 /* DDPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B073425FC836A00B35421 /* DDPaddingLabel.swift */; };
+		4C4050222610860400B51745 /* ZFMultiTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4050202610860400B51745 /* ZFMultiTabPageViewController.swift */; };
+		4C4050232610860400B51745 /* ZFMultiTabChildPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4050212610860400B51745 /* ZFMultiTabChildPageViewController.swift */; };
+		4C405029261086EB00B51745 /* ZFCommonTabItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C405027261086EB00B51745 /* ZFCommonTabItemCell.swift */; };
+		4C40502A261086EB00B51745 /* ZFCommonTabScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C405028261086EB00B51745 /* ZFCommonTabScrollView.swift */; };
+		4C40502F2610885000B51745 /* ZFDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40502E2610885000B51745 /* ZFDemoViewController.swift */; };
+		4C4050352610895400B51745 /* ZFMultipleTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4050332610895400B51745 /* ZFMultipleTabView.swift */; };
+		4C4050362610895400B51745 /* ZFMultipleTabViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4050342610895400B51745 /* ZFMultipleTabViewConfig.swift */; };
+		4C40503C261089E900B51745 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40503A261089E800B51745 /* UIView+Utility.swift */; };
+		4C40503D261089E900B51745 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40503B261089E800B51745 /* String+Utility.swift */; };
+		4C40504226108A9500B51745 /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40504126108A9500B51745 /* BlackViewController.swift */; };
 		4C824B03260F2D2B001F0654 /* CouponsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B00260F2D2B001F0654 /* CouponsResult.swift */; };
 		4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */; };
 		4C824B05260F2D2B001F0654 /* CouponsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B02260F2D2B001F0654 /* CouponsData.swift */; };
@@ -77,6 +87,16 @@
 		4C1B180125F39B900055C16C /* CellArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellArticleDetail.swift; sourceTree = "<group>"; };
 		4C38393025F5123400A8294E /* ArticleWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewController.swift; sourceTree = "<group>"; };
 		4C3B073425FC836A00B35421 /* DDPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPaddingLabel.swift; sourceTree = "<group>"; };
+		4C4050202610860400B51745 /* ZFMultiTabPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFMultiTabPageViewController.swift; sourceTree = "<group>"; };
+		4C4050212610860400B51745 /* ZFMultiTabChildPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFMultiTabChildPageViewController.swift; sourceTree = "<group>"; };
+		4C405027261086EB00B51745 /* ZFCommonTabItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFCommonTabItemCell.swift; sourceTree = "<group>"; };
+		4C405028261086EB00B51745 /* ZFCommonTabScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFCommonTabScrollView.swift; sourceTree = "<group>"; };
+		4C40502E2610885000B51745 /* ZFDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFDemoViewController.swift; sourceTree = "<group>"; };
+		4C4050332610895400B51745 /* ZFMultipleTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFMultipleTabView.swift; sourceTree = "<group>"; };
+		4C4050342610895400B51745 /* ZFMultipleTabViewConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFMultipleTabViewConfig.swift; sourceTree = "<group>"; };
+		4C40503A261089E800B51745 /* UIView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utility.swift"; sourceTree = "<group>"; };
+		4C40503B261089E800B51745 /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
+		4C40504126108A9500B51745 /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
 		4C824B00260F2D2B001F0654 /* CouponsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsResult.swift; sourceTree = "<group>"; };
 		4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsTbkTpwdCreateResponse.swift; sourceTree = "<group>"; };
 		4C824B02260F2D2B001F0654 /* CouponsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsData.swift; sourceTree = "<group>"; };
@@ -174,6 +194,21 @@
 			path = widget;
 			sourceTree = "<group>";
 		};
+		4C40501F261085CC00B51745 /* zfpage */ = {
+			isa = PBXGroup;
+			children = (
+				4C40503B261089E800B51745 /* String+Utility.swift */,
+				4C40503A261089E800B51745 /* UIView+Utility.swift */,
+				4C4050332610895400B51745 /* ZFMultipleTabView.swift */,
+				4C4050342610895400B51745 /* ZFMultipleTabViewConfig.swift */,
+				4C405027261086EB00B51745 /* ZFCommonTabItemCell.swift */,
+				4C405028261086EB00B51745 /* ZFCommonTabScrollView.swift */,
+				4C4050212610860400B51745 /* ZFMultiTabChildPageViewController.swift */,
+				4C4050202610860400B51745 /* ZFMultiTabPageViewController.swift */,
+			);
+			path = zfpage;
+			sourceTree = "<group>";
+		};
 		4C824AF3260F2C68001F0654 /* bean */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +283,7 @@
 		4CEC695C25FBA58700D70B7E /* 领券联盟 */ = {
 			isa = PBXGroup;
 			children = (
+				4C40502E2610885000B51745 /* ZFDemoViewController.swift */,
 				4C8470FB260EC35E008C5B48 /* 详情 */,
 				4CEC696925FBA5D200D70B7E /* 特惠 */,
 				4CEC696525FBA5BA00D70B7E /* api */,
@@ -314,6 +350,7 @@
 		4CF48B8525F130F900188AE5 /* uitable */ = {
 			isa = PBXGroup;
 			children = (
+				4C40501F261085CC00B51745 /* zfpage */,
 				4CE2233B26023DBE00F4C43D /* utils */,
 				4C3B073325FC834B00B35421 /* widget */,
 				4CEC695C25FBA58700D70B7E /* 领券联盟 */,
@@ -329,6 +366,7 @@
 				4CF48B9425F130F900188AE5 /* Info.plist */,
 				4CF48BCD25F1333500188AE5 /* CellLoopDetail.swift */,
 				4CF48BD725F133E200188AE5 /* WeatherResponse.swift */,
+				4C40504126108A9500B51745 /* BlackViewController.swift */,
 			);
 			path = uitable;
 			sourceTree = "<group>";
@@ -547,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C40502A261086EB00B51745 /* ZFCommonTabScrollView.swift in Sources */,
 				4C8470FD260EC394008C5B48 /* GoodsDetailControllerViewController.swift in Sources */,
 				4CEC699925FBAEF300D70B7E /* PreferentialCellTableViewCell.swift in Sources */,
 				4CF48B8B25F130F900188AE5 /* ViewController.swift in Sources */,
@@ -559,19 +598,26 @@
 				4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */,
 				4CE2233D26023DE100F4C43D /* AppFontUtils.swift in Sources */,
 				4CEC695E25FBA5AF00D70B7E /* UnionApi.swift in Sources */,
+				4C4050232610860400B51745 /* ZFMultiTabChildPageViewController.swift in Sources */,
 				4C97418825F671E5000C1B8B /* ActivityViewController.swift in Sources */,
 				4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */,
+				4C4050352610895400B51745 /* ZFMultipleTabView.swift in Sources */,
 				4C97418D25F67264000C1B8B /* FindViewController.swift in Sources */,
 				4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */,
 				4CF48B8725F130F900188AE5 /* AppDelegate.swift in Sources */,
+				4C4050222610860400B51745 /* ZFMultiTabPageViewController.swift in Sources */,
 				4CEC696B25FBA69300D70B7E /* PreferentialViewController.swift in Sources */,
 				4C824B05260F2D2B001F0654 /* CouponsData.swift in Sources */,
 				4CB538E9260ECC0200569649 /* ZPageControl.swift in Sources */,
 				4CB538E4260ECBD400569649 /* ZCycleView.swift in Sources */,
 				4CF48B8925F130F900188AE5 /* SceneDelegate.swift in Sources */,
 				4C1B17F825F387D70055C16C /* ArticleViewController.swift in Sources */,
+				4C405029261086EB00B51745 /* ZFCommonTabItemCell.swift in Sources */,
 				4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */,
+				4C40503D261089E900B51745 /* String+Utility.swift in Sources */,
+				4C4050362610895400B51745 /* ZFMultipleTabViewConfig.swift in Sources */,
 				4C97419725F6727E000C1B8B /* MeViewController.swift in Sources */,
+				4C40504226108A9500B51745 /* BlackViewController.swift in Sources */,
 				4CB538DF260ECB8C00569649 /* ZCycleLayout.swift in Sources */,
 				4CF48BD825F133E200188AE5 /* WeatherResponse.swift in Sources */,
 				4C824B0A260F2D97001F0654 /* CouponsPara.swift in Sources */,
@@ -582,8 +628,10 @@
 				4C97418325F6707E000C1B8B /* HomeViewController.swift in Sources */,
 				4CAC163B25FF928C0099F8F6 /* UITableView+Extension.swift in Sources */,
 				4CF48BCE25F1333500188AE5 /* CellLoopDetail.swift in Sources */,
+				4C40503C261089E900B51745 /* UIView+Utility.swift in Sources */,
 				4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */,
 				4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */,
+				4C40502F2610885000B51745 /* ZFDemoViewController.swift in Sources */,
 				4C9F007125F2684C007BCEB0 /* WxListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
