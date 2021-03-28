@@ -12,6 +12,7 @@ target 'uitable' do
     pod 'Kingfisher', '~> 6.0'
     pod 'ESPullToRefresh'
     #pod 'ZCycleView', '1.0.2'
+    pod 'JXSegmentedView'
        
 
 end

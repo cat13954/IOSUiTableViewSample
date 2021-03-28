@@ -7,7 +7,7 @@
 
 import UIKit
 import SnapKit
-
+import JXSegmentedView
 class MeViewController: BaseViewController {
 
     private lazy var lab: UILabel = {
@@ -18,7 +18,7 @@ class MeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(lab)
-        lab.text = "me"
+        lab.text = "测试me"
         lab.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
         }
