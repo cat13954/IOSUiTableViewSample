@@ -2,38 +2,37 @@
 //  LoadDataViewController.swift
 //  JXSegmentedView
 //
-//  Created by jiaxin on 2019/1/7.
-//  Copyright © 2019 jiaxin. All rights reserved.
+//  Created by alice on 2021/3/28.
 //
 
 import UIKit
 import JXSegmentedView
 import SnapKit
+import Alamofire
+
 class LoadDataViewController: UIViewController {
     var segmentedDataSource: JXSegmentedTitleDataSource!
     var segmentedView: JXSegmentedView!
     var listContainerView: JXSegmentedListContainerView!
-
+    //标题tab数据
+    private var tabTitles = [String]()
+    //分类的完整数据
+    private var categories = [CategoryData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "推荐"
+        //title = "推荐分类"
         view.backgroundColor = .white
-        // 设置导航栏背景为透明色图片
-        //navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        // 设置导航栏阴影为透明色图片
-        //navigationController?.navigationBar.shadowImage = UIImage()
-        //这个默认是UIRectEdgeNone 表示视图坐标的计算是从导航栏下开始的。UIRectEdgeAll;
-        //self.edgesForExtendedLayout = UIRectEdge.all
-        //navigationController?.navigationBar.isTranslucent = true
+        //直接隐藏bar
+        navigationController?.setNavigationBarHidden(true, animated: false)
         
-         
         //1、初始化JXSegmentedView
         segmentedView = JXSegmentedView()
-
+        
         //2、配置数据源
         //segmentedViewDataSource一定要通过属性强持有！！！！！！！！！
         segmentedDataSource = JXSegmentedTitleDataSource()
-        segmentedDataSource.titles = getRandomTitles()
+        segmentedDataSource.titles = tabTitles
         segmentedDataSource.isTitleColorGradientEnabled = true
         segmentedView.dataSource = segmentedDataSource
         
@@ -42,49 +41,71 @@ class LoadDataViewController: UIViewController {
         indicator.indicatorWidth = JXSegmentedViewAutomaticDimension
         indicator.lineStyle = .lengthen
         segmentedView.indicators = [indicator]
-
+        
         //4、配置JXSegmentedView的属性
         view.addSubview(segmentedView)
-
+        
         //5、初始化JXSegmentedListContainerView
         listContainerView = JXSegmentedListContainerView(dataSource: self)
         view.addSubview(listContainerView)
-
+        
         //6、将listContainerView.scrollView和segmentedView.contentScrollView进行关联
         segmentedView.listContainer = listContainerView
-
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "刷新数据", style: UIBarButtonItem.Style.plain, target: self, action: #selector(reloadData))
-    }
-
-    @objc func reloadData() {
-        segmentedDataSource.titles = getRandomTitles()
-        segmentedView.defaultSelectedIndex = 1
-        segmentedView.reloadData()
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        //let app = UIApplication.shared
-        //let height = app.statusBarFrame.size.height
         
-        //let topInset: CGFloat = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? UIApplication.shared.statusBarFrame.size.height
-         
-        
-        //let topInset = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-        //segmentedView.frame = CGRect(x: 0, y: topInset, width: view.bounds.size.width, height: 50)
+        //布局子控件,
         segmentedView.snp.makeConstraints { (make) in
+            //tab的宽度等于屏幕宽度
             make.width.equalToSuperview()
+            //tab高度50
             make.height.equalTo(50)
+            //tab的顶部,在安全区顶部
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
         }
-        //listContainerView.frame = CGRect(x: 0, y: 150, width: view.bounds.size.width, height: view.bounds.size.height - 150)
         listContainerView.snp.makeConstraints { (mm) in
+            //可以滑动的容器,在tab的下面,宽度屏幕宽,底部在安全区的最下边
             mm.top.equalTo(segmentedView.snp.bottom)
             mm.width.equalToSuperview()
             mm.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
+        
+        //获取分类数据
+        getCategories()
     }
-
+    //获取分类的数据
+    func getCategories() {
+        Alamofire.request(UnionApi.getCategoryUrl()).responseObject{
+            (response: DataResponse<CategoryClass>) in
+            if let res = response.result.value?.data{
+                //分类数据获取成功,设置到tab中
+                self.setTabTitle(data: res)
+            }
+        }
+    }
+    
+    func setTabTitle(data: [CategoryData]) {
+        categories = data
+        //把分类名字取出来
+        for category in data {
+            tabTitles.append(category.title ?? "")
+        }
+        //把获取的分类数组设置到tab中
+        segmentedDataSource.titles = tabTitles
+        //显示当前tab的第一个位置
+        segmentedView.defaultSelectedIndex = 0
+        //设置数据之后,需要刷新
+        segmentedView.reloadData()
+    }
+    
+    @objc func reloadData() {
+//        segmentedDataSource.titles = getRandomTitles()
+//        segmentedView.defaultSelectedIndex = 1
+//        segmentedView.reloadData()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
     func getRandomTitles() -> [String] {
         let titles = ["猴哥", "青蛙王子", "旺财", "粉红猪", "喜羊羊", "黄焖鸡", "小马哥", "牛魔王", "大象先生", "神龙"]
         //随机title数量，4~n
@@ -102,12 +123,14 @@ class LoadDataViewController: UIViewController {
 
 extension LoadDataViewController: JXSegmentedListContainerViewDataSource {
     func numberOfLists(in listContainerView: JXSegmentedListContainerView) -> Int {
+        //tab的总个数
         return segmentedDataSource.dataSource.count
     }
-
+    
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
-        let vc = LoadDataListViewController()
-        vc.typeString = segmentedDataSource.titles[index]
+        //当切换的时候,加载不同的页面
+        let vc = PreferentialViewController()
+        //vc.typeString = segmentedDataSource.titles[index]
         return vc
     }
 }

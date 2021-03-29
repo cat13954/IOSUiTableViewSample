@@ -22,4 +22,8 @@ class UnionApi: NSObject {
     public static func getCouponsUrl() -> String {
         return getBaseUrl() + "/tpwd";
     }
+    
+    public static func getCategoryUrl() -> String {
+        return getBaseUrl() + "/discovery/categories";
+    }
 }

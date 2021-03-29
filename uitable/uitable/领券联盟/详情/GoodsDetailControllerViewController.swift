@@ -116,6 +116,7 @@ class GoodsDetailControllerViewController: BaseViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         //self.title = "详情"
+        //navigationController?.setNavigationBarHidden(false, animated: false)
         view.addSubview(cycleView)
         view.addSubview(labPrice)
         //轮播图的位置与大小

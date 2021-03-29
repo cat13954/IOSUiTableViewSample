@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import ESPullToRefresh
+import JXSegmentedView
 //领券联盟特惠页面.单纯的一个ui tab
 class PreferentialViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     let cellId = "PreferentialCell"
@@ -124,3 +125,26 @@ extension PreferentialViewController{
         navigationController?.pushViewController(goodsVC, animated: true)
     }
 }
+
+extension PreferentialViewController: JXSegmentedListContainerViewListDelegate {
+    func listView() -> UIView {
+        return view
+    }
+
+    func listDidAppear() {
+        //因为`JXSegmentedListContainerView`内部通过`UICollectionView`的cell加载列表。当切换tab的时候，之前的列表所在的cell就被回收到缓存池，就会从视图层级树里面被剔除掉，即没有显示出来且不在视图层级里面。这个时候MJRefreshHeader所持有的UIActivityIndicatorView就会被设置hidden。所以需要在列表显示的时候，且isRefreshing==YES的时候，再让UIActivityIndicatorView重新开启动画。
+//        if (self.tableView.mj_header.isRefreshing) {
+//            UIActivityIndicatorView *activity = [self.tableView.mj_header valueForKey:@"loadingView"];
+//            [activity startAnimating];
+//        }
+//        if refreshControl?.isRefreshing == true {
+//            refreshControl?.beginRefreshing()
+//        }
+//        print("listDidAppear")
+    }
+
+    func listDidDisappear() {
+//        print("listDidDisappear")
+    }
+}
+

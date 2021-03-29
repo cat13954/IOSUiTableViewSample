@@ -2,8 +2,7 @@
 //  PagingListBaseCell.swift
 //  JXSegmentedViewExample
 //
-//  Created by blue on 2020/6/19.
-//  Copyright © 2020 jiaxin. All rights reserved.
+//  Created by alice on 2021/3/28.
 //
 
 import UIKit

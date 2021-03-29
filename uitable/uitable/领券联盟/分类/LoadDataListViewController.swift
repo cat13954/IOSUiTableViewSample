@@ -1,9 +1,9 @@
 //
 //  LoadDataListViewController.swift
-//  JXSegmentedView
 //
-//  Created by jiaxin on 2019/1/7.
-//  Copyright © 2019 jiaxin. All rights reserved.
+//
+//  Created by alice on 2021/3/28.
+//
 //
 
 import UIKit
