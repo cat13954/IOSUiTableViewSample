@@ -24,7 +24,7 @@ class CategoryController: UIViewController {
         //title = "推荐分类"
         view.backgroundColor = .white
         //直接隐藏bar
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         
         //1、初始化JXSegmentedView
         segmentedView = JXSegmentedView()
@@ -118,6 +118,11 @@ class CategoryController: UIViewController {
             tempTitles.remove(at: randomIndex)
         }
         return resultTitles
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //视图将出现,显示
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 }
 

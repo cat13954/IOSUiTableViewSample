@@ -117,6 +117,7 @@ class GoodsDetailControllerViewController: BaseViewController {
         view.backgroundColor = .white
         //self.title = "详情"
         //navigationController?.setNavigationBarHidden(false, animated: false)
+        
         view.addSubview(cycleView)
         view.addSubview(labPrice)
         //轮播图的位置与大小
@@ -285,8 +286,14 @@ class GoodsDetailControllerViewController: BaseViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //视图将出现,显示
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     
-    
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 }
 
 extension GoodsDetailControllerViewController: ZCycleViewProtocol{

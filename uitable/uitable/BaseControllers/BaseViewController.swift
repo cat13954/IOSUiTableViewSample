@@ -29,17 +29,24 @@ class BaseViewController: UIViewController {
         /// 2、backBarButtonItem 是来自上一个页面，如果当前 VC 是第一个页面，那么它没有上一个页面，也就没有 backBarButtonItem；
         /// 3、leftBarButtonItem 是来自当前页面，与上个页面无关，因此，如果当前 VC 是第一个页面，那么设置了 leftBarButtonItem 就会很奇怪；
         ///
+        
+        setBlackIcon()
+        
+        setTitleState()
+        
+    }
+    func setBlackIcon() {
         let item = UIBarButtonItem.init()
         navigationItem.backBarButtonItem = item
         navigationItem.backBarButtonItem?.tintColor = .black
         
-        
+    }
+    
+    func setTitleState() {
         //设置导航栏背景为透明色图片
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         //设置导航栏阴影为透明色图片
         navigationController?.navigationBar.shadowImage = UIImage()
-        
     }
-    
     
 }
