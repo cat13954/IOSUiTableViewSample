@@ -9,8 +9,8 @@ import UIKit
 import JXSegmentedView
 import SnapKit
 import Alamofire
-
-class LoadDataViewController: UIViewController {
+//分类页面
+class CategoryController: UIViewController {
     var segmentedDataSource: JXSegmentedTitleDataSource!
     var segmentedView: JXSegmentedView!
     var listContainerView: JXSegmentedListContainerView!
@@ -121,7 +121,7 @@ class LoadDataViewController: UIViewController {
     }
 }
 
-extension LoadDataViewController: JXSegmentedListContainerViewDataSource {
+extension CategoryController: JXSegmentedListContainerViewDataSource {
     func numberOfLists(in listContainerView: JXSegmentedListContainerView) -> Int {
         //tab的总个数
         return segmentedDataSource.dataSource.count

@@ -23,7 +23,7 @@
 		4C40503D261089E900B51745 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40503B261089E800B51745 /* String+Utility.swift */; };
 		4C40504226108A9500B51745 /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40504126108A9500B51745 /* BlackViewController.swift */; };
 		4C48E41726109D890061B0B0 /* JXPagingViewRTLCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E41626109D890061B0B0 /* JXPagingViewRTLCompatible.swift */; };
-		4C48E4372610C2C30061B0B0 /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E4362610C2C30061B0B0 /* LoadDataViewController.swift */; };
+		4C48E4372610C2C30061B0B0 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E4362610C2C30061B0B0 /* CategoryController.swift */; };
 		4C48E43C2610C2F00061B0B0 /* LoadDataListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E43B2610C2F00061B0B0 /* LoadDataListViewController.swift */; };
 		4C824B03260F2D2B001F0654 /* CouponsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B00260F2D2B001F0654 /* CouponsResult.swift */; };
 		4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */; };
@@ -104,7 +104,7 @@
 		4C40503B261089E800B51745 /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
 		4C40504126108A9500B51745 /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
 		4C48E41626109D890061B0B0 /* JXPagingViewRTLCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXPagingViewRTLCompatible.swift; sourceTree = "<group>"; };
-		4C48E4362610C2C30061B0B0 /* LoadDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadDataViewController.swift; sourceTree = "<group>"; };
+		4C48E4362610C2C30061B0B0 /* CategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		4C48E43B2610C2F00061B0B0 /* LoadDataListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadDataListViewController.swift; sourceTree = "<group>"; };
 		4C824B00260F2D2B001F0654 /* CouponsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsResult.swift; sourceTree = "<group>"; };
 		4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsTbkTpwdCreateResponse.swift; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 				4CE893E42612140800D036D8 /* bean */,
 				4CE893DF26120E3300D036D8 /* PagingListBaseCell.swift */,
 				4C48E43B2610C2F00061B0B0 /* LoadDataListViewController.swift */,
-				4C48E4362610C2C30061B0B0 /* LoadDataViewController.swift */,
+				4C48E4362610C2C30061B0B0 /* CategoryController.swift */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -662,7 +662,7 @@
 				4C9F006925F264CD007BCEB0 /* BeanWxList.swift in Sources */,
 				4C48E41726109D890061B0B0 /* JXPagingViewRTLCompatible.swift in Sources */,
 				4C40503D261089E900B51745 /* String+Utility.swift in Sources */,
-				4C48E4372610C2C30061B0B0 /* LoadDataViewController.swift in Sources */,
+				4C48E4372610C2C30061B0B0 /* CategoryController.swift in Sources */,
 				4C4050362610895400B51745 /* ZFMultipleTabViewConfig.swift in Sources */,
 				4C97419725F6727E000C1B8B /* MeViewController.swift in Sources */,
 				4C40504226108A9500B51745 /* BlackViewController.swift in Sources */,

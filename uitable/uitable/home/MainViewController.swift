@@ -33,7 +33,7 @@ class MainViewController: UITabBarController {
         ceVC.tabBarItem.title = "小册"
         ceVC.tabBarItem.image = UIImage(named: "tab_xiaoce_normal")
         
-        let meVC = CustomNavigationControllerViewController(rootViewController: LoadDataViewController())
+        let meVC = CustomNavigationControllerViewController(rootViewController: CategoryController())
         meVC.tabBarItem.title = "我的"
         meVC.tabBarItem.image = UIImage(named: "tab_profile_normal")
         
