@@ -1,6 +1,0 @@
-framework module Pods_sob_blog_sob_blogUITests {
-  umbrella header "Pods-sob_blog-sob_blogUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
