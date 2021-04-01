@@ -16,15 +16,4 @@
 ![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/open-taobao.gif)
 ### 最新特惠商品列表
 
-
-
-
 ![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/Xnip2021-03-17_22-15-03.png)
-
-
-![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/Xnip2021-03-07_22-20-14.png)
->公众号列表
-![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/Xnip2021-03-05_22-20-08.png)
-
->轮播图列表
-![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/Xnip2021-03-04_23-30-05.png)
