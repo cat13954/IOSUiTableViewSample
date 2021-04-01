@@ -17,12 +17,12 @@ class MainViewController: UITabBarController {
     func initTab() {
         //ZFDemoViewController
         //PreferentialViewController
-        let homeVC = CustomNavigationControllerViewController(rootViewController: PreferentialViewController())
+        let homeVC = CustomNavigationControllerViewController(rootViewController: CategoryController())
         homeVC.tabBarItem.title = "首页"
         homeVC.tabBarItem.image = UIImage(named: "tab_home_normal")
         
-        let activityVC = CustomNavigationControllerViewController(rootViewController: WxListController())
-        activityVC.tabBarItem.title = "沸点"
+        let activityVC = CustomNavigationControllerViewController(rootViewController: PreferentialViewController())
+        activityVC.tabBarItem.title = "特惠"
         activityVC.tabBarItem.image = UIImage(named: "tab_activity")
         
         let findVC = CustomNavigationControllerViewController(rootViewController: FindViewController())
@@ -33,11 +33,11 @@ class MainViewController: UITabBarController {
         ceVC.tabBarItem.title = "小册"
         ceVC.tabBarItem.image = UIImage(named: "tab_xiaoce_normal")
         
-        let meVC = CustomNavigationControllerViewController(rootViewController: CategoryController())
+        let meVC = CustomNavigationControllerViewController(rootViewController: MeViewController())
         meVC.tabBarItem.title = "我的"
         meVC.tabBarItem.image = UIImage(named: "tab_profile_normal")
         
-        viewControllers = [meVC, activityVC, findVC, ceVC, homeVC]
+        viewControllers = [homeVC, activityVC, findVC, ceVC, meVC]
         setTabBarItemAttributes(fontName: "Courier", fontSize: 12, normalColor: ColorUtils.parser("#969695"), selectedColor: ColorUtils.parser("#027AFF"), bgColor: UIColor.white)
     }
     

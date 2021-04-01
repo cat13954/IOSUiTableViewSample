@@ -25,6 +25,7 @@
 		4C48E41726109D890061B0B0 /* JXPagingViewRTLCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E41626109D890061B0B0 /* JXPagingViewRTLCompatible.swift */; };
 		4C48E4372610C2C30061B0B0 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E4362610C2C30061B0B0 /* CategoryController.swift */; };
 		4C48E43C2610C2F00061B0B0 /* LoadDataListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E43B2610C2F00061B0B0 /* LoadDataListViewController.swift */; };
+		4C7D23C22615F97A00AE436F /* CategoryTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D23C12615F97A00AE436F /* CategoryTabViewController.swift */; };
 		4C824B03260F2D2B001F0654 /* CouponsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B00260F2D2B001F0654 /* CouponsResult.swift */; };
 		4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */; };
 		4C824B05260F2D2B001F0654 /* CouponsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B02260F2D2B001F0654 /* CouponsData.swift */; };
@@ -106,6 +107,7 @@
 		4C48E41626109D890061B0B0 /* JXPagingViewRTLCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXPagingViewRTLCompatible.swift; sourceTree = "<group>"; };
 		4C48E4362610C2C30061B0B0 /* CategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		4C48E43B2610C2F00061B0B0 /* LoadDataListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadDataListViewController.swift; sourceTree = "<group>"; };
+		4C7D23C12615F97A00AE436F /* CategoryTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTabViewController.swift; sourceTree = "<group>"; };
 		4C824B00260F2D2B001F0654 /* CouponsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsResult.swift; sourceTree = "<group>"; };
 		4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsTbkTpwdCreateResponse.swift; sourceTree = "<group>"; };
 		4C824B02260F2D2B001F0654 /* CouponsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsData.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				4CE893DF26120E3300D036D8 /* PagingListBaseCell.swift */,
 				4C48E43B2610C2F00061B0B0 /* LoadDataListViewController.swift */,
 				4C48E4362610C2C30061B0B0 /* CategoryController.swift */,
+				4C7D23C12615F97A00AE436F /* CategoryTabViewController.swift */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */,
 				4C4050352610895400B51745 /* ZFMultipleTabView.swift in Sources */,
 				4C97418D25F67264000C1B8B /* FindViewController.swift in Sources */,
+				4C7D23C22615F97A00AE436F /* CategoryTabViewController.swift in Sources */,
 				4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */,
 				4CF48B8725F130F900188AE5 /* AppDelegate.swift in Sources */,
 				4C4050222610860400B51745 /* ZFMultiTabPageViewController.swift in Sources */,

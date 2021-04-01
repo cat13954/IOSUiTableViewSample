@@ -173,7 +173,8 @@ class PreferentialCellTableViewCell: UITableViewCell {
         labPrice.attributedText  = AppFontUtils.formatThePrice(priceContent: priceContent, tagFontSize: UIFont.systemFont(ofSize: 10), priceFontSize:UIFont.boldSystemFont(ofSize: 14), textColor: ColorUtils.parser("#F35410"))
         
         //店铺名字
-        labStoreName.text = "\(item.nick!)>"
+        let storeName = item.nick ?? "淘宝店铺"
+        labStoreName.text = storeName
         //tab
         labTag.text = item.levelOneCategoryName
     }

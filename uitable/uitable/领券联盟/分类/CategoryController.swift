@@ -134,7 +134,10 @@ extension CategoryController: JXSegmentedListContainerViewDataSource {
     
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
         //当切换的时候,加载不同的页面
-        let vc = PreferentialViewController()
+        //let vc = PreferentialViewController()
+        let vc = CategoryTabViewController()
+        let tabData = categories[index]
+        vc.categoryID = "\(tabData.id!)"
         //vc.typeString = segmentedDataSource.titles[index]
         return vc
     }

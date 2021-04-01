@@ -303,3 +303,48 @@ class ResultList : NSObject, NSCoding, Mappable{
     }
 
 }
+
+class CategoryListBean : NSObject, Mappable{
+
+    var code : Int?
+    var data : [MapData]?
+    var message : String?
+    var success : Bool?
+
+
+     
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        code <- map["code"]
+        data <- map["data"]
+        message <- map["message"]
+        success <- map["success"]
+        
+    }
+ 
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if code != nil{
+            aCoder.encode(code, forKey: "code")
+        }
+        if data != nil{
+            aCoder.encode(data, forKey: "data")
+        }
+        if message != nil{
+            aCoder.encode(message, forKey: "message")
+        }
+        if success != nil{
+            aCoder.encode(success, forKey: "success")
+        }
+
+    }
+
+}

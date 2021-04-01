@@ -18,12 +18,16 @@ class UnionApi: NSObject {
     public static func getPreferentialUrl(page: Int) -> String {
         return getBaseUrl() + "/onSell/\(page)";
     }
-    
+    //获取优惠券
     public static func getCouponsUrl() -> String {
         return getBaseUrl() + "/tpwd";
     }
-    
+    //获取分类列表
     public static func getCategoryUrl() -> String {
         return getBaseUrl() + "/discovery/categories";
+    }
+    //获取具体分类
+    public static func getCategoriesByID(id: String, page: Int) -> String{
+        return getBaseUrl() + "/discovery/\(id)/\(page)"
     }
 }
