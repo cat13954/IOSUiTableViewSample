@@ -6,6 +6,10 @@
 - 纯代码布局的学习
 - uitableview的案例
 
+### 首页的分类列表
+![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/category.gif)
+
+
 ### 商品详情页面
 ![image](https://github.com/cat13954/IOSUiTableViewSample/blob/master/img/taobao-dialog.png)
 
