@@ -27,7 +27,10 @@ class CustomCollectionViewCell: UICollectionViewCell {
     }
     
     func setImageUrl(imageUrl: String) {
-        let u = URL(string: "https:\(imageUrl)")
+        var u = URL(string: "https:\(imageUrl)")
+        if imageUrl.contains("http") {
+            u = URL(string: imageUrl)
+        }
         //商品图片
         imageView.kf.setImage(with: u)
     }

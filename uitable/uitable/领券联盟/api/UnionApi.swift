@@ -27,7 +27,11 @@ class UnionApi: NSObject {
         return getBaseUrl() + "/discovery/categories";
     }
     //获取具体分类
-    public static func getCategoriesByID(id: String, page: Int) -> String{
+    public static func getCategoriesByID(id: String, page: Int) -> String {
         return getBaseUrl() + "/discovery/\(id)/\(page)"
+    }
+    
+    public static func search() -> String {
+        return getBaseUrl() + "/search"
     }
 }

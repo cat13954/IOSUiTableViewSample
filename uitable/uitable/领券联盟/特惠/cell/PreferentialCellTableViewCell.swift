@@ -148,8 +148,12 @@ class PreferentialCellTableViewCell: UITableViewCell {
     }
     
     func setValueForCell(item: MapData) {
-        //print("图地址:\(item.pictUrl)")
-        let url = "https:\(item.pictUrl ?? "")"
+        print("图地址:\(item.pictUrl ?? "")")
+        let imageUrl = item.pictUrl ?? ""
+        var url = "https:\(item.pictUrl ?? "")"
+        if imageUrl.contains("http") {
+            url = imageUrl
+        }
         //print(url)
         let u = URL(string: url)
         //商品图片

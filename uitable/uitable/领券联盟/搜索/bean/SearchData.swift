@@ -6,22 +6,20 @@ import Foundation
 import ObjectMapper
 
 
-class Data : NSObject, NSCoding, Mappable{
+class SearchData : NSObject, NSCoding, Mappable{
 
-	var model : String?
-	var tbkTpwdCreateResponse : TbkTpwdCreateResponse?
+	var tbkDgMaterialOptionalResponse : TbkDgMaterialOptionalResponse?
 
 
 	class func newInstance(map: Map) -> Mappable?{
-        return Data()
+        return SearchData()
 	}
 	required init?(map: Map){}
 	private override init(){}
 
 	func mapping(map: Map)
 	{
-		model <- map["model"]
-		tbkTpwdCreateResponse <- map["tbk_tpwd_create_response"]
+		tbkDgMaterialOptionalResponse <- map["tbk_dg_material_optional_response"]
 		
 	}
 
@@ -31,8 +29,7 @@ class Data : NSObject, NSCoding, Mappable{
     */
     @objc required init(coder aDecoder: NSCoder)
 	{
-         model = aDecoder.decodeObject(forKey: "model") as? String
-         tbkTpwdCreateResponse = aDecoder.decodeObject(forKey: "tbk_tpwd_create_response") as? TbkTpwdCreateResponse
+         tbkDgMaterialOptionalResponse = aDecoder.decodeObject(forKey: "tbk_dg_material_optional_response") as? TbkDgMaterialOptionalResponse
 
 	}
 
@@ -42,11 +39,8 @@ class Data : NSObject, NSCoding, Mappable{
     */
     @objc func encode(with aCoder: NSCoder)
 	{
-		if model != nil{
-			aCoder.encode(model, forKey: "model")
-		}
-		if tbkTpwdCreateResponse != nil{
-			aCoder.encode(tbkTpwdCreateResponse, forKey: "tbk_tpwd_create_response")
+		if tbkDgMaterialOptionalResponse != nil{
+			aCoder.encode(tbkDgMaterialOptionalResponse, forKey: "tbk_dg_material_optional_response")
 		}
 
 	}

@@ -25,6 +25,10 @@
 		4C48E41726109D890061B0B0 /* JXPagingViewRTLCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E41626109D890061B0B0 /* JXPagingViewRTLCompatible.swift */; };
 		4C48E4372610C2C30061B0B0 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E4362610C2C30061B0B0 /* CategoryController.swift */; };
 		4C48E43C2610C2F00061B0B0 /* LoadDataListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48E43B2610C2F00061B0B0 /* LoadDataListViewController.swift */; };
+		4C6D9BD12647E3BE000C9480 /* TbkDgMaterialOptionalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D9BCB2647E3BE000C9480 /* TbkDgMaterialOptionalResponse.swift */; };
+		4C6D9BD32647E3BE000C9480 /* SearchBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D9BCD2647E3BE000C9480 /* SearchBean.swift */; };
+		4C6D9BD42647E3BE000C9480 /* SearchMapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D9BCE2647E3BE000C9480 /* SearchMapData.swift */; };
+		4C6D9BD52647E3BE000C9480 /* SearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D9BCF2647E3BE000C9480 /* SearchData.swift */; };
 		4C7D23C22615F97A00AE436F /* CategoryTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D23C12615F97A00AE436F /* CategoryTabViewController.swift */; };
 		4C824B03260F2D2B001F0654 /* CouponsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B00260F2D2B001F0654 /* CouponsResult.swift */; };
 		4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */; };
@@ -107,6 +111,10 @@
 		4C48E41626109D890061B0B0 /* JXPagingViewRTLCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JXPagingViewRTLCompatible.swift; sourceTree = "<group>"; };
 		4C48E4362610C2C30061B0B0 /* CategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		4C48E43B2610C2F00061B0B0 /* LoadDataListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadDataListViewController.swift; sourceTree = "<group>"; };
+		4C6D9BCB2647E3BE000C9480 /* TbkDgMaterialOptionalResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TbkDgMaterialOptionalResponse.swift; sourceTree = "<group>"; };
+		4C6D9BCD2647E3BE000C9480 /* SearchBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBean.swift; sourceTree = "<group>"; };
+		4C6D9BCE2647E3BE000C9480 /* SearchMapData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMapData.swift; sourceTree = "<group>"; };
+		4C6D9BCF2647E3BE000C9480 /* SearchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
 		4C7D23C12615F97A00AE436F /* CategoryTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTabViewController.swift; sourceTree = "<group>"; };
 		4C824B00260F2D2B001F0654 /* CouponsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsResult.swift; sourceTree = "<group>"; };
 		4C824B01260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponsTbkTpwdCreateResponse.swift; sourceTree = "<group>"; };
@@ -243,6 +251,17 @@
 			path = "分类";
 			sourceTree = "<group>";
 		};
+		4C6D9BB82647E272000C9480 /* bean */ = {
+			isa = PBXGroup;
+			children = (
+				4C6D9BCF2647E3BE000C9480 /* SearchData.swift */,
+				4C6D9BCE2647E3BE000C9480 /* SearchMapData.swift */,
+				4C6D9BCD2647E3BE000C9480 /* SearchBean.swift */,
+				4C6D9BCB2647E3BE000C9480 /* TbkDgMaterialOptionalResponse.swift */,
+			);
+			path = bean;
+			sourceTree = "<group>";
+		};
 		4C824AF3260F2C68001F0654 /* bean */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,7 +289,6 @@
 				4C97417A25F66FE4000C1B8B /* MainViewController.swift */,
 				4C97418225F6707E000C1B8B /* HomeViewController.swift */,
 				4C97418725F671E5000C1B8B /* ActivityViewController.swift */,
-				4C97418C25F67264000C1B8B /* FindViewController.swift */,
 				4C97419125F67270000C1B8B /* CeViewController.swift */,
 				4C97419625F6727E000C1B8B /* MeViewController.swift */,
 			);
@@ -294,6 +312,15 @@
 				4C9F007525F26CA5007BCEB0 /* CellWxAuthor.swift */,
 			);
 			path = wan;
+			sourceTree = "<group>";
+		};
+		4CA3B8562647D6C5005ABEBE /* 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				4C6D9BB82647E272000C9480 /* bean */,
+				4C97418C25F67264000C1B8B /* FindViewController.swift */,
+			);
+			path = "搜索";
 			sourceTree = "<group>";
 		};
 		4CDEE82E25F8FD4F00AA395F /* BaseControllers */ = {
@@ -326,6 +353,7 @@
 		4CEC695C25FBA58700D70B7E /* 领券联盟 */ = {
 			isa = PBXGroup;
 			children = (
+				4CA3B8562647D6C5005ABEBE /* 搜索 */,
 				4C48E41E26109E030061B0B0 /* 分类 */,
 				4C40502E2610885000B51745 /* ZFDemoViewController.swift */,
 				4C8470FB260EC35E008C5B48 /* 详情 */,
@@ -644,12 +672,14 @@
 				4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */,
 				4C3B073525FC836A00B35421 /* DDPaddingLabel.swift in Sources */,
 				4C9F006325F26325007BCEB0 /* ApiConstant.swift in Sources */,
+				4C6D9BD12647E3BE000C9480 /* TbkDgMaterialOptionalResponse.swift in Sources */,
 				4CE2233D26023DE100F4C43D /* AppFontUtils.swift in Sources */,
 				4CEC695E25FBA5AF00D70B7E /* UnionApi.swift in Sources */,
 				4C4050232610860400B51745 /* ZFMultiTabChildPageViewController.swift in Sources */,
 				4C97418825F671E5000C1B8B /* ActivityViewController.swift in Sources */,
 				4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */,
 				4C4050352610895400B51745 /* ZFMultipleTabView.swift in Sources */,
+				4C6D9BD32647E3BE000C9480 /* SearchBean.swift in Sources */,
 				4C97418D25F67264000C1B8B /* FindViewController.swift in Sources */,
 				4C7D23C22615F97A00AE436F /* CategoryTabViewController.swift in Sources */,
 				4C824B04260F2D2B001F0654 /* CouponsTbkTpwdCreateResponse.swift in Sources */,
@@ -659,6 +689,7 @@
 				4C824B05260F2D2B001F0654 /* CouponsData.swift in Sources */,
 				4CB538E9260ECC0200569649 /* ZPageControl.swift in Sources */,
 				4CB538E4260ECBD400569649 /* ZCycleView.swift in Sources */,
+				4C6D9BD52647E3BE000C9480 /* SearchData.swift in Sources */,
 				4CE893E82612141E00D036D8 /* CategoryClass.swift in Sources */,
 				4CF48B8925F130F900188AE5 /* SceneDelegate.swift in Sources */,
 				4C1B17F825F387D70055C16C /* ArticleViewController.swift in Sources */,
@@ -679,6 +710,7 @@
 				4CF48BD325F1337B00188AE5 /* ColorUtils.swift in Sources */,
 				4C97418325F6707E000C1B8B /* HomeViewController.swift in Sources */,
 				4CAC163B25FF928C0099F8F6 /* UITableView+Extension.swift in Sources */,
+				4C6D9BD42647E3BE000C9480 /* SearchMapData.swift in Sources */,
 				4CF48BCE25F1333500188AE5 /* CellLoopDetail.swift in Sources */,
 				4C40503C261089E900B51745 /* UIView+Utility.swift in Sources */,
 				4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */,
