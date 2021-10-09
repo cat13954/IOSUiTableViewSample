@@ -11,6 +11,7 @@
 		4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B17FC25F38BED0055C16C /* BeanArticle.swift */; };
 		4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B180125F39B900055C16C /* CellArticleDetail.swift */; };
 		4C24C8D72711DA3100FCBF19 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24C8D62711DA3100FCBF19 /* TestViewController.swift */; };
+		4C24C8DF2711E96D00FCBF19 /* ProfessTypeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24C8DE2711E96D00FCBF19 /* ProfessTypeViewCell.swift */; };
 		4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C38393025F5123400A8294E /* ArticleWebViewController.swift */; };
 		4C3B073525FC836A00B35421 /* DDPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B073425FC836A00B35421 /* DDPaddingLabel.swift */; };
 		4C4050222610860400B51745 /* ZFMultiTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4050202610860400B51745 /* ZFMultiTabPageViewController.swift */; };
@@ -98,6 +99,7 @@
 		4C1B17FC25F38BED0055C16C /* BeanArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanArticle.swift; sourceTree = "<group>"; };
 		4C1B180125F39B900055C16C /* CellArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellArticleDetail.swift; sourceTree = "<group>"; };
 		4C24C8D62711DA3100FCBF19 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		4C24C8DE2711E96D00FCBF19 /* ProfessTypeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessTypeViewCell.swift; sourceTree = "<group>"; };
 		4C38393025F5123400A8294E /* ArticleWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewController.swift; sourceTree = "<group>"; };
 		4C3B073425FC836A00B35421 /* DDPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPaddingLabel.swift; sourceTree = "<group>"; };
 		4C4050202610860400B51745 /* ZFMultiTabPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFMultiTabPageViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				4C24C8D62711DA3100FCBF19 /* TestViewController.swift */,
+				4C24C8DE2711E96D00FCBF19 /* ProfessTypeViewCell.swift */,
 			);
 			name = test;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				4CEC695E25FBA5AF00D70B7E /* UnionApi.swift in Sources */,
 				4C4050232610860400B51745 /* ZFMultiTabChildPageViewController.swift in Sources */,
 				4C97418825F671E5000C1B8B /* ActivityViewController.swift in Sources */,
+				4C24C8DF2711E96D00FCBF19 /* ProfessTypeViewCell.swift in Sources */,
 				4CDEE83025F8FD7C00AA395F /* BaseViewController.swift in Sources */,
 				4C4050352610895400B51745 /* ZFMultipleTabView.swift in Sources */,
 				4C6D9BD32647E3BE000C9480 /* SearchBean.swift in Sources */,
