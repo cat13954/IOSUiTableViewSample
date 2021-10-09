@@ -10,6 +10,7 @@
 		4C1B17F825F387D70055C16C /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B17F725F387D70055C16C /* ArticleViewController.swift */; };
 		4C1B17FD25F38BED0055C16C /* BeanArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B17FC25F38BED0055C16C /* BeanArticle.swift */; };
 		4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B180125F39B900055C16C /* CellArticleDetail.swift */; };
+		4C24C8D72711DA3100FCBF19 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24C8D62711DA3100FCBF19 /* TestViewController.swift */; };
 		4C38393125F5123400A8294E /* ArticleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C38393025F5123400A8294E /* ArticleWebViewController.swift */; };
 		4C3B073525FC836A00B35421 /* DDPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B073425FC836A00B35421 /* DDPaddingLabel.swift */; };
 		4C4050222610860400B51745 /* ZFMultiTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4050202610860400B51745 /* ZFMultiTabPageViewController.swift */; };
@@ -96,6 +97,7 @@
 		4C1B17F725F387D70055C16C /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		4C1B17FC25F38BED0055C16C /* BeanArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanArticle.swift; sourceTree = "<group>"; };
 		4C1B180125F39B900055C16C /* CellArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellArticleDetail.swift; sourceTree = "<group>"; };
+		4C24C8D62711DA3100FCBF19 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4C38393025F5123400A8294E /* ArticleWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewController.swift; sourceTree = "<group>"; };
 		4C3B073425FC836A00B35421 /* DDPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPaddingLabel.swift; sourceTree = "<group>"; };
 		4C4050202610860400B51745 /* ZFMultiTabPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFMultiTabPageViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,14 @@
 				4C38393025F5123400A8294E /* ArticleWebViewController.swift */,
 			);
 			path = article;
+			sourceTree = "<group>";
+		};
+		4C24C8D52711DA1200FCBF19 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				4C24C8D62711DA3100FCBF19 /* TestViewController.swift */,
+			);
+			name = test;
 			sourceTree = "<group>";
 		};
 		4C3B073325FC834B00B35421 /* widget */ = {
@@ -422,6 +432,7 @@
 		4CF48B8525F130F900188AE5 /* uitable */ = {
 			isa = PBXGroup;
 			children = (
+				4C24C8D52711DA1200FCBF19 /* test */,
 				4C48E41526109D7C0061B0B0 /* jx */,
 				4C40501F261085CC00B51745 /* zfpage */,
 				4CE2233B26023DBE00F4C43D /* utils */,
@@ -668,6 +679,7 @@
 				4C824B03260F2D2B001F0654 /* CouponsResult.swift in Sources */,
 				4C48E43C2610C2F00061B0B0 /* LoadDataListViewController.swift in Sources */,
 				4CE893E026120E3300D036D8 /* PagingListBaseCell.swift in Sources */,
+				4C24C8D72711DA3100FCBF19 /* TestViewController.swift in Sources */,
 				4CEC697D25FBA95A00D70B7E /* RootClass.swift in Sources */,
 				4C1B180225F39B900055C16C /* CellArticleDetail.swift in Sources */,
 				4C3B073525FC836A00B35421 /* DDPaddingLabel.swift in Sources */,

@@ -12,6 +12,9 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initTab()
+        let testVC = TestViewController()
+        //navigationController?.pushViewController(testVC, animated: true)
+        //navigationController?.pushViewController(testVC, animated: true)
     }
     
     func initTab() {
