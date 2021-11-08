@@ -221,7 +221,8 @@ class MapData : NSObject, Mappable{
     var userType : Int?
     var volume : Int?
     var zkFinalPrice : String?
-
+    var url : String?
+    var reservePrice : String?
 
     class func newInstance(map: Map) -> Mappable?{
         return MapData()
@@ -231,6 +232,8 @@ class MapData : NSObject, Mappable{
 
     func mapping(map: Map)
     {
+        reservePrice <- map["reserve_price"]
+        url <- map["url"]
         categoryId <- map["category_id"]
         categoryName <- map["category_name"]
         clickUrl <- map["click_url"]

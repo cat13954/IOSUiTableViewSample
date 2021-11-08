@@ -11,12 +11,14 @@ class UnionApi: NSObject {
     
     //base url
     public static func getBaseUrl() -> String{
-        return "https://api.sunofbeach.net/shop"
+        return "http://shop.debuglive.cn/shop"
     }
     
     //获取特惠数据,传递page
     public static func getPreferentialUrl(page: Int) -> String {
-        return getBaseUrl() + "/onSell/\(page)";
+        let url =  getBaseUrl() + "/onSell/\(page)";
+        print(url)
+        return url
     }
     //获取优惠券
     public static func getCouponsUrl() -> String {

@@ -46,7 +46,7 @@ class GoodsDetailControllerViewController: BaseViewController {
         lab.textColor = ColorUtils.parser("#9D9E9F")
         lab.font = lab.font.withSize(12)
         lab.textAlignment = NSTextAlignment.left
-        
+        lab.text = ""
         return lab
     }()
     
@@ -138,12 +138,21 @@ class GoodsDetailControllerViewController: BaseViewController {
         if let item = goodsData {
             let coupon = item.couponAmount
             let price = (item.zkFinalPrice! as NSString).floatValue
-            //取2位小数
-            let finalPrice = String.init(format: "%.2f", (price - Float(coupon)))
-            let priceContent = "¥\(finalPrice)"
-            
-            //高矮处理,把$和价格都放进来一起处理
-            labPrice.attributedText  = AppFontUtils.formatThePrice(priceContent: priceContent, tagFontSize: UIFont.systemFont(ofSize: 14), priceFontSize:UIFont.boldSystemFont(ofSize: 20), textColor: ColorUtils.parser("#F35410"))
+            print("优惠之后的价格\(coupon)")
+            print("优惠之后的价格\(String(describing: item.reservePrice))")
+            if coupon != 0 {
+                //取2位小数
+                let finalPrice = String.init(format: "%.2f", (price - Float(coupon)))
+                let priceContent = "¥\(finalPrice)"
+                //高矮处理,把$和价格都放进来一起处理
+                labPrice.attributedText  = AppFontUtils.formatThePrice(priceContent: priceContent, tagFontSize: UIFont.systemFont(ofSize: 14), priceFontSize:UIFont.boldSystemFont(ofSize: 20), textColor: ColorUtils.parser("#F35410"))
+            }else{
+                let v = 0.00
+                let finalPrice = String.init(format: "%.2f", (price - Float(v)))
+                let priceContent = "¥\(finalPrice)"
+                //高矮处理,把$和价格都放进来一起处理
+                labPrice.attributedText  = AppFontUtils.formatThePrice(priceContent: priceContent, tagFontSize: UIFont.systemFont(ofSize: 14), priceFontSize:UIFont.boldSystemFont(ofSize: 20), textColor: ColorUtils.parser("#F35410"))
+            }
         }
         view.addSubview(labGoodsName)
         //商品名字
@@ -164,9 +173,18 @@ class GoodsDetailControllerViewController: BaseViewController {
         }
         //处理中划线
         if let item = goodsData {
-            let original = "原价:" + item.zkFinalPrice!
-            //把处理中划线的值赋值
-            labOriginalPrice.attributedText = AppFontUtils.strikethroughStyle(content: original)
+            if item.couponAmount == 0 {
+                print("优惠之后的价格\(String(describing: item.reservePrice))")
+                let va = 0.00
+                let price = (item.reservePrice as! NSString).floatValue
+                let finalPrice = String.init(format: "%.2f", (price - Float(va)))
+                let priceContent = "¥\(finalPrice)"
+                labOriginalPrice.attributedText = AppFontUtils.strikethroughStyle(content: priceContent)
+            }else{
+                let original = "原价:" + item.zkFinalPrice!
+                //把处理中划线的值赋值
+                labOriginalPrice.attributedText = AppFontUtils.strikethroughStyle(content: original)
+            }
         }
         view.addSubview(labTag)
         //标签
@@ -268,8 +286,11 @@ class GoodsDetailControllerViewController: BaseViewController {
     
     func getCoupons() {
         //获取优惠券
-        //let paraData = CouponsPara(title: goodsData?.title ?? "", url: goodsData?.couponClickUrl ?? "")
-        let clickUrl = goodsData?.couponClickUrl ?? ""
+         
+        var clickUrl = goodsData?.couponClickUrl ?? ""
+        if clickUrl.isEmpty {
+            clickUrl = goodsData?.url ?? ""
+        }
         let targetUrl = "https:\(clickUrl)"
         let paraData: NSDictionary = ["title":goodsData?.title ?? "", "url":targetUrl]
         let headers = [
@@ -278,7 +299,7 @@ class GoodsDetailControllerViewController: BaseViewController {
         
         Alamofire.request(UnionApi.getCouponsUrl(), method: .post, parameters: paraData as! Parameters,encoding: JSONEncoding.default, headers: headers).responseObject{  (response: DataResponse<CouponsResult>) in
             let data = response.result.value
-            print(data?.data?.tbkTpwdCreateResponse?.data?.model)
+            //print(data?.data?.tbkTpwdCreateResponse?.data?.model)
             //显示优惠券数据
             if let model = data?.data?.tbkTpwdCreateResponse?.data?.model{
                 self.labCouponContent.text = model

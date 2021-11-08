@@ -148,7 +148,7 @@ class PreferentialCellTableViewCell: UITableViewCell {
     }
     
     func setValueForCell(item: MapData) {
-        print("图地址:\(item.pictUrl ?? "")")
+        //print("图地址:\(item.pictUrl ?? "")")
         let imageUrl = item.pictUrl ?? ""
         var url = "https:\(item.pictUrl ?? "")"
         if imageUrl.contains("http") {
@@ -160,21 +160,50 @@ class PreferentialCellTableViewCell: UITableViewCell {
         imgCover.kf.setImage(with: u)
         //商品名字,只显示2行
         labGoodsName.text = item.title
-        //开始价格
-        //处理中划线
-        let original = "原价:" + item.zkFinalPrice!
-        //把处理中划线的值赋值
-        labOriginalPrice.attributedText = AppFontUtils.strikethroughStyle(content: original)
+        
         
         //优惠之后的
         let coupon = item.couponAmount
         let price = (item.zkFinalPrice! as NSString).floatValue
+        print("优惠价:")
+        print(item.reservePrice ?? 0)
+        print(coupon)
+        print(price)
         //取2位小数
-        let finalPrice = String.init(format: "%.2f", (price - Float(coupon)))
-        let priceContent = "¥\(finalPrice)"
+        if coupon != 0 {
+            let finalPrice = String.init(format: "%.2f", (price - Float(coupon)))
+            let priceContent = "¥\(finalPrice)"
+            
+            //高矮处理,把$和价格都放进来一起处理
+            labPrice.attributedText  = AppFontUtils.formatThePrice(priceContent: priceContent, tagFontSize: UIFont.systemFont(ofSize: 10), priceFontSize:UIFont.boldSystemFont(ofSize: 14), textColor: ColorUtils.parser("#F35410"))
+            
+            //开始价格
+            //处理中划线
+            let original = "原价:" + item.zkFinalPrice!
+            //把处理中划线的值赋值
+            labOriginalPrice.attributedText = AppFontUtils.strikethroughStyle(content: original)
+        }else{
+            let va = (item.reservePrice! as NSString).floatValue
+            //print("转换之后: \(va)")
+            let ff = 0.00
+            let finalPrice = String.init(format: "%.2f", (price - Float(ff)))
+            let priceContent = "¥\(finalPrice)"
+            
+            //高矮处理,把$和价格都放进来一起处理
+            labPrice.attributedText  = AppFontUtils.formatThePrice(priceContent: priceContent, tagFontSize: UIFont.systemFont(ofSize: 10), priceFontSize:UIFont.boldSystemFont(ofSize: 14), textColor: ColorUtils.parser("#F35410"))
+            
+            //开始价格
+            //处理中划线
+            let original = "原价:" + item.reservePrice!
+            //把处理中划线的值赋值
+            labOriginalPrice.attributedText = AppFontUtils.strikethroughStyle(content: original)
+        }
         
-        //高矮处理,把$和价格都放进来一起处理
-        labPrice.attributedText  = AppFontUtils.formatThePrice(priceContent: priceContent, tagFontSize: UIFont.systemFont(ofSize: 10), priceFontSize:UIFont.boldSystemFont(ofSize: 14), textColor: ColorUtils.parser("#F35410"))
+        
+        
+        
+        
+        
         
         //店铺名字
         let storeName = item.nick ?? "淘宝店铺"
